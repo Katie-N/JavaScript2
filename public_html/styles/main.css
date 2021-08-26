@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+
+:root {
+  --main-bg-color: #f3f3f3;
+  --accent-color: #f9ddd2;
+  --dark-accent-color: #525252;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+.paragraph, td {
+  font-family: 'Courier New', Courier;
+
+}
+
+.headingText, th {
+  font-family: "Playfair Display";
+}
+
+.headingDivider {
+  background-color: var(--accent-color);
+  text-align: center;
+  margin: auto;
+  margin-bottom: 2rem;
+  padding: 0.75rem 0;
+}
+
+main {
+  width: 75vw;
+  margin: auto;
+}
+
+main > * {
+  margin-top: 2rem;
+}
+
+th, td {
+  border: 2px solid var(--accent-color);
+}
+
+td {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+code {
+  color: var(--main-bg-color);
+  background-color: var(--dark-accent-color);
+  border-radius: 10%;
+}
+
+ol {
+  list-style-position: inside;
+}

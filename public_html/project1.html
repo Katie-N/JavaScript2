@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Katie Nordberg">
+    <meta name="date" content="8-23-2021">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title></title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1 class="headingText headingDivider">Questions</h1>
+        <p id="q1" class="paragraph">What is</p>
+        <p id="q2" class="paragraph">Who is</p>
+        <p id="q3" class="paragraph">How is</p>
+      </section>
+
+      <table>
+    		<tbody>
+          <tr>
+      			<th class="headingText">Language</th>
+      			<th class="headingText">HTML</th>
+      			<th class="headingText">CSS</th>
+      			<th class="headingText">JavaScript</th>
+      		</tr>
+      		<tr>
+      			<th class="headingText">Acronym</th>
+      			<td>HyperText Markup Language</td>
+      			<td>Cascading Style Sheet</td>
+      			<td>JavaScript is not an acronym</td>
+      		</tr>
+      		<tr>
+      			<th class="headingText">Definition</th>
+      			<td></td>
+      			<td></td>
+      			<td></td>
+      		</tr>
+      		<tr>
+      			<th class="headingText">Purpose</th>
+      			<td>To provide the "building blocks"/"markup" of a website. This is where the content is.</td>
+      			<td>To style the content and website. CSS makes things look aesthetically pleasing.</td>
+      			<td>To add functionality to the page. JavaScript elevates the page from just things to look at to things you can interact with.</td>
+      		</tr>
+
+      		<tr>
+      			<th class="headingText">Comment Syntax</th>
+      			<td>&lt!-- HTML comment here --&gt</td>
+      			<td>/* I am a CSS comment */</td>
+      			<td>// This is a single line comment.<br>/* This is a<br>multiline comment*/</td>
+      		</tr>
+      		<tr>
+      			<th class="headingText">Code editor you will be using in this class</th>
+      			<td>Atom</td>
+      			<td>Atom</td>
+      			<td>Atom</td>
+      		</tr>
+      		<tr>
+      			<th class="headingText">Validator or primary debugging tool you will be using in this class</th>
+      			<td><a href="https://validator.w3.org/#validate_by_upload">W3C Markup Validation Service</a></td>
+      			<td><a href="https://jigsaw.w3.org/css-validator/">W3C CSS Validation Service</a></td>
+      			<td></td>
+      		</tr>
+      		<tr>
+      			<th class="headingText">Discuss case sensitivity in this language</th>
+      			<td>HTML 5 is not case sensitive but current best practice is to write all HTML in lowercase characters with the exception of the &lt;!DOCTYPE html&gt; statement which is equally acceptable in either upper or lowercase &lt;!doctype html&gt;.</td>
+      			<td>CSS 3 is not case sensitive but current best practice is to write all CSS in lowercase characters except for proper font names such as Arial, Georgia, or Times New Roman. <br>Another best practice is to match case sensitivity in CSS selectors to their id or class attribute values in the html for readability.</td>
+      			<td></td>
+      		</tr>
+      	</tbody>
+      </table>
+
+      <table>
+    		<tbody>
+          <tr>
+      			<th>Terminology</th>
+      			<th>Language</th>
+      			<th>Purpose</th>
+      			<th>Example</th>
+      		</tr>
+      		<tr>
+      			<th>element</th>
+      			<td>HTML</td>
+      			<td>To semantically describe and structure content on a web page</td>
+      			<td><code>&lt;p&gt;These tags and text constitute a p (paragraph) element.&lt;/p&gt;</code></td>
+      		</tr>
+      		<tr>
+      			<th>attribute</th>
+      			<td>HTML</td>
+      			<td>To contain data related to its element.</td>
+      			<td><code>&lt;a href="https://google.com"&gt;This is a link to a Google. The href and the address it holds is an attribute of the a (anchor) element.&lt;/a&gt;</code></td>
+      		</tr>
+      		<tr>
+      			<th>selector</th>
+      			<td>CSS</td>
+      			<td>To "select" specific elements in order to style them.</td>
+      			<td><code>.thisPeriodSymbolIsAClassSelector {...</code></td>
+      		</tr>
+      		<tr>
+      			<th>property</th>
+      			<td>CSS</td>
+      			<td>To specify which part of an element to style.</td>
+      			<td>Just the name but not the value.<br><code>#example {<br>&#9;pretend-property: pretend-value;<br>}</code></td>
+      		</tr>
+      		<tr>
+      			<th>declaration</th>
+      			<td>CSS</td>
+      			<td>To assign a value to a property and style specific parts of an element.</td>
+      			<td>Includes the property, a colon, the value, and a semicolon.<br><code>#example {<br>&#9;background-color: lilac;<br>}</code></td>
+      		</tr>
+      		<tr>
+      			<th>object</th>
+      			<td>JavaScript</td>
+      			<td>To contain multiple pieces of related data.</td>
+      			<td><code></code></td>
+      		</tr>
+      		<tr>
+      			<th>method</th>
+      			<td>JavaScript</td>
+      			<td>To create a reusable set of instructions for the webpage to execute.</td>
+      			<td><code></code></td>
+      		</tr>
+      		<tr>
+      			<th>event</th>
+      			<td>JavaScript</td>
+      			<td>To trigger something to happen when the event occurs.</td>
+      			<td><code></code></td>
+      		</tr>
+      		<tr>
+      			<th>property</th>
+      			<td>JavaScript</td>
+      			<td>To specify and access a piece of data in an object.</td>
+      			<td><code>document.</code></td>
+      		</tr>
+      	</tbody>
+      </table>
+
+      <section>
+        <h3 class="headingText headingDivider">How do HTML id and class attributes connect to CSS selectors?</h3>
+        <ol>
+      		<li class="paragraph"><code>&lt;p id="xyz"&gt; Item number xyz. &lt;/p&gt;</code> connects to what selector in the css? <u>#</u></li>
+      		<li class="paragraph">How many html elements may have the same <code>id="xyz"</code> attribute value on a given page? <u>1</u></li>
+      		<li class="paragraph"><code>&lt;p class="holidayItem"&gt;Seasonal item for sale.&lt;/p&gt;</code> connects to what selector in the css? <u>.</u></li>
+      		<li class="paragraph">How many html elements may have the same <code> class="holidayItem"</code> attribute value on a given page? <u>There is no limit</u></li>
+      	</ol>
+      </section>
+    </main>
+  </body>
+</html>
