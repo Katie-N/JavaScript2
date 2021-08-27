@@ -1,3 +1,4 @@
+/* Katie Nordberg 8-23-2021 */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
 
 :root {
@@ -16,9 +17,8 @@ body {
   background-color: var(--main-bg-color);
 }
 
-.paragraph, td {
+.paragraph, td, li {
   font-family: 'Courier New', Courier;
-
 }
 
 .headingText, th {
@@ -44,6 +44,7 @@ main > * {
 
 th, td {
   border: 2px solid var(--accent-color);
+  padding: 1rem;
 }
 
 td {
@@ -59,4 +60,8 @@ code {
 
 ol {
   list-style-position: inside;
+}
+
+li > ul, li > ol {
+  margin-left: 1rem;
 }
