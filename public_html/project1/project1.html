@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Katie Nordberg">
+    <meta name="date" content="8-23-2021">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="./project1.css">
+    <title></title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1 class="headingText headingDivider">Questions</h1>
+        <p id="q1" class="paragraph">What is</p>
+        <p id="q2" class="paragraph">Who is</p>
+        <p id="q3" class="paragraph">How is</p>
+      </section>
+
+      <section>
+        <h1 class="headingText headingDivider">HTML - CSS - JavaScript Essential Concepts</h1>
+        <table>
+      		<tbody>
+            <tr>
+        			<th class="headingText">Language</th>
+        			<th class="headingText">HTML</th>
+        			<th class="headingText">CSS</th>
+        			<th class="headingText">JavaScript</th>
+        		</tr>
+        		<tr>
+        			<th class="headingText">Acronym</th>
+        			<td>HyperText Markup Language</td>
+        			<td>Cascading Style Sheet</td>
+        			<td>JavaScript is not an acronym</td>
+        		</tr>
+        		<tr>
+        			<th class="headingText">Definition</th>
+        			<td>A markup language that holds the content of the page.</td>
+        			<td>A stylesheet language where the site styling is done.</td>
+        			<td>A programming language that can alter site behavior.</td>
+        		</tr>
+        		<tr>
+        			<th class="headingText" id="purposeRow">Purpose</th>
+        			<td>To provide the "building blocks"/"markup" of a website.</td>
+        			<td>To style the content and website. CSS makes things look aesthetically pleasing.</td>
+        			<td>To add functionality to the page. JavaScript elevates the page from just things to look at to things you can interact with.</td>
+        		</tr>
+
+        		<tr>
+        			<th class="headingText">Comment Syntax</th>
+        			<td>&lt!-- HTML comment here --&gt</td>
+        			<td>/* I am a CSS comment */</td>
+        			<td>// This is a single line comment.<br>/* This is a<br>multiline comment*/</td>
+        		</tr>
+        		<tr>
+        			<th class="headingText">Code editor you will be using in this class</th>
+        			<td>Atom</td>
+        			<td>Atom</td>
+        			<td>Atom</td>
+        		</tr>
+        		<tr>
+        			<th class="headingText">Validator or primary debugging tool you will be using in this class</th>
+        			<td><a href="https://validator.w3.org/#validate_by_upload">W3C Markup Validation Service</a></td>
+        			<td><a href="https://jigsaw.w3.org/css-validator/">W3C CSS Validation Service</a></td>
+        			<td><a href="https://beautifytools.com/javascript-validator.php">Beautify Tools - JavaScript Tool</a> and/or <a href="https://esprima.org/demo/validate.html">Espirma</a></td>
+        		</tr>
+        		<tr>
+        			<th class="headingText">Discuss case sensitivity in this language</th>
+        			<td>HTML 5 is not case sensitive but current best practice is to write all HTML in lowercase characters with the exception of the &lt;!DOCTYPE html&gt; statement which is equally acceptable in either upper or lowercase &lt;!doctype html&gt;.</td>
+        			<td>CSS 3 is not case sensitive but current best practice is to write all CSS in lowercase characters except for proper font names such as Arial, Georgia, or Times New Roman. <br>Another best practice is to match case sensitivity in CSS selectors to their id or class attribute values in the html for readability.</td>
+        			<td>JavaScript is a case sensitive language. Yellow is not the same as yellow. There are some common conventions for casing: global variables and constants use all capitalized names; variable names can either be camel case or have an underscore between words. I prefer using camel case. Unlike HTML and CSS, hyphens are not allowed in JavaScript names.</td>
+        		</tr>
+        	</tbody>
+        </table>
+      </section>
+
+      <section>
+        <h1 class="headingText headingDivider">HTML - CSS - JavaScript Essential Terminology</h1>
+        <table id="terminology">
+          <tbody>
+            <tr>
+              <th>Terminology</th>
+              <th>Language</th>
+              <th>Purpose</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <th>element</th>
+              <td>HTML</td>
+              <td>To semantically describe and structure content on a web page</td>
+              <td><code>&lt;p&gt;These tags and text constitute a p (paragraph) element.&lt;/p&gt;</code></td>
+            </tr>
+            <tr>
+              <th>attribute</th>
+              <td>HTML</td>
+              <td>To contain data related to its element.</td>
+              <td><code>&lt;a href="https://google.com"&gt;This is a link to Google. The href and the address it holds is an attribute of the a (anchor) element.&lt;/a&gt;</code></td>
+            </tr>
+            <tr>
+              <th>selector</th>
+              <td>CSS</td>
+              <td>To "select" specific elements in order to style them.</td>
+              <td><code>.thisPeriodSymbolIsAClassSelector {...</code></td>
+            </tr>
+            <tr>
+              <th>property</th>
+              <td>CSS</td>
+              <td>To specify which part of an element to style.</td>
+              <td>Just the property name and its value<br><pre><code>#example {<br>&#9;pretend-property: pretend-property-value;<br>&#9;background-color: gray;<br>}</code></pre></td>
+            </tr>
+            <tr>
+              <th>declaration</th>
+              <td>CSS</td>
+              <td>To assign a value to a property and style specific parts of an element.</td>
+              <td>Includes the property, a colon, the value, and a semicolon.<br><pre><code>#example {<br>&#9;background-color: lilac;<br>}</code></pre></td>
+            </tr>
+            <tr>
+              <th>object</th>
+              <td>JavaScript</td>
+              <td>To contain multiple pieces of related data. And to provide functions that can work with the specific properties of the object.</td>
+              <td><pre><code>let developer = {<br>&#9;name: "Katie";<br>&#9;age: 18;<br>&#9;school: "Johnson County Community College";<br>}</code></pre></td>
+            </tr>
+            <tr>
+              <th>method</th>
+              <td>JavaScript</td>
+              <td>To create a reusable set of instructions for the webpage to execute. Methods can receive and/or update object property values.</td>
+              <td><pre><code>function addNumbers(let x, let y) {<br>&#9;return x + y;<br>}</code></pre></td>
+            </tr>
+            <tr>
+              <th>event</th>
+              <td>JavaScript</td>
+              <td>To trigger something to happen when the event occurs. Usually by executing a method.</td>
+              <td><code>thingThatEventHappensTo.eventName(statement/function);<br>document.onload(console.log("The page has loaded"));</code></td>
+            </tr>
+            <tr>
+              <th>property</th>
+              <td>JavaScript</td>
+              <td>To specify and allow access to a piece of data in an object.</td>
+              <td><code>someObject.somePropertyName<br>window.innerWidth</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h3 class="headingText headingDivider">How do HTML id and class attributes connect to CSS selectors?</h3>
+        <ol>
+          <li class="paragraph"><code>&lt;p id="xyz"&gt; Item number xyz. &lt;/p&gt;</code> connects to what selector in the css? <u>#xyz and p</u></li>
+          <li class="paragraph">How many html elements may have the same <code>id="xyz"</code> attribute value on a given page? <u>1</u></li>
+          <li class="paragraph"><code>&lt;p class="holidayItem"&gt;Seasonal item for sale.&lt;/p&gt;</code> connects to what selector in the css? <u>.holidayItem and p</u></li>
+          <li class="paragraph">How many html elements may have the same <code> class="holidayItem"</code> attribute value on a given page? <u>There is no limit</u></li>
+        </ol>
+      </section>
+
+      <section>
+        <h3 class="headingText headingDivider">JavaScript Best Practices</h3>
+        <ol>
+      		<li>inline vs. embedded vs. external JavaScript using examples.
+            <ul>
+              <li>inline
+                <ul>
+                  <li>Pros: Quick and easy.</li>
+                  <li>Cons: Very bad for reusability.</li>
+                  <li>Ex:<br><code>&lt;h1 onclick="alert("Hello there!")"&gt;Click me to get a greeting&lt;/h1&gt;</code></li>
+                </ul>
+              </li>
+              <li>Embedded
+                <ul>
+                  <li>Pros: Removes the need for a separate JavaScript file so it saves a little bit of space and time. </li>
+                  <li>Cons: Is not good practice because it disables reusability of the objects, functions, etc. It also reduces readability of the HTML and JavaScript by not separating the languages into their own files as they serve different purposes. <a href="#purposeRow">see purpose row on table above</a></li>
+                  <li>Ex:<br><pre><code>&lt;/body&gt;<br><br>&lt;script&gt;<br>    let color = "red";<br>&lt;/script&gt;</code></pre></li>
+                </ul>
+              </li>
+              <li>External
+                <ul>
+                  <li>Pros: The functions, objects, and variables are reusable on multiple pages.</li>
+                  <li>Cons: You will have to manage at least two files (.js and .html) as opposed to just 1 (.html).</li>
+                  <li>Ex:<br><pre><code>&lt;/body&gt;<br>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Indenting your code
+            <ul>
+              <li>Pros: makes code much easier to read because it organizes sections. It makes nested code easier to understand. It helps visualize the scope of functions.</li>
+              <li>Cons: it makes the files larger. You may have to scroll sideways in order to fully read the code.</li>
+              <li>Ex:<br><pre><code>&lt;ol&gt;<br>    &lt;li&gt;This line is indented&lt;/li&gt;<br>&lt;li&gt;This line is not&lt;/li&gt;<br>&lt;/ol&gt;</code></pre></li>
+            </ul>
+          </li>
+          <li>Inserting code comments
+            <ul>
+              <li>Pros: It help you understand what the code is and what it does. It can also help keep track of problems in the code that need to be revisited.</li>
+              <li>Cons: It makes the files larger. And the code should be self-explanatory so that no comments are needed.</li>
+              <li>Ex:<br><code>/* convertMilkToCheese will calculate the amount of time needed to make cheese from the given amount of milk (let milkAmt) */ <br>function convertMilkToCheese(milkAmt) {...}</code></li>
+            </ul>
+          </li>
+      	</ol>
+      </section>
+
+      <section>
+        <h3 class="headingText headingDivider">JavaScript vs. Java</h3>
+        <ul>
+          <li>What is the general purpose for each language?
+            <ul>
+              <li>JavaScript - </li>
+              <li>Java - </li>
+            </ul>
+          </li>
+          <li>Strict vs. loose variable typing - what does this mean as it relates to Java and JavaScript?
+            <li>JavaScript - </li>
+            <li>Java - </li>
+          </li>
+          <li>Where is the source code for each language compiled or interpreted?
+            <ul>
+              <li>JavaScript - </li>
+              <li>Java - </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
