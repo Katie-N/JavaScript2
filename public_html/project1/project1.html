@@ -6,15 +6,17 @@
     <meta name="date" content="8-23-2021">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="./project1.css">
-    <title></title>
+    <title>Project 1</title>
   </head>
   <body>
     <main>
       <section>
         <h1 class="headingText headingDivider">Questions</h1>
         <p id="q1" class="paragraph">The code in add-content.js uses the method <code>write</code>. Isn't this an unsafe way to add html to the document? What are some safe alternatives?</p>
+        <br>
         <p id="q2" class="paragraph"><code>Date()</code> seems to be a very useful object type. What are some of its other methods besides <code>getTime()</code>?</p>
-        <p id="q3" class="paragraph">Could you make not just the greeting change but also the site colors as the time changes? Maybe something like calling a function which updates CSS variables with new hex codes? Ex.<br><code>if (hourNow > 22 && hourNow < 6){<br><pre>&#9;nightTheme();</pre><br>}</code> </p>
+        <br>
+        <p id="q3" class="paragraph">Could you make not just the greeting change but also the site colors as the time changes? Maybe something like calling a function which updates CSS variables with new hex codes? Ex.<br></p><pre><code>if (hourNow &gt; 22 && hourNow &lt; 6){<br>&#9;nightTheme();}</code></pre>
       </section>
 
       <section>
@@ -37,7 +39,7 @@
         			<th class="headingText">Definition</th>
         			<td>A markup language that holds the content of the page.</td>
         			<td>A stylesheet language where the site styling is done.</td>
-        			<td>A programming language that can alter site behavior.</td>
+        			<td>A scripting language that can alter site behavior.</td>
         		</tr>
         		<tr>
         			<th class="headingText" id="purposeRow">Purpose</th>
@@ -48,7 +50,7 @@
 
         		<tr>
         			<th class="headingText">Comment Syntax</th>
-        			<td>&lt!-- HTML comment here --&gt</td>
+        			<td>&lt;!-- HTML comment here --&gt;</td>
         			<td>/* I am a CSS comment */</td>
         			<td>// This is a single line comment.<br>/* This is a<br>multiline comment*/</td>
         		</tr>
@@ -79,61 +81,61 @@
         <table id="terminology">
           <tbody>
             <tr>
-              <th>Terminology</th>
-              <th>Language</th>
-              <th>Purpose</th>
-              <th>Example</th>
+              <th class="headingText">Terminology</th>
+              <th class="headingText">Language</th>
+              <th class="headingText">Purpose</th>
+              <th class="headingText">Example</th>
             </tr>
             <tr>
-              <th>element</th>
+              <th class="headingText">element</th>
               <td>HTML</td>
               <td>To semantically describe and structure content on a web page</td>
               <td><code>&lt;p&gt;These tags and text constitute a p (paragraph) element.&lt;/p&gt;</code></td>
             </tr>
             <tr>
-              <th>attribute</th>
+              <th class="headingText">attribute</th>
               <td>HTML</td>
               <td>To contain data related to its element.</td>
               <td><code>&lt;a href="https://google.com"&gt;This is a link to Google. The href and the address it holds is an attribute of the a (anchor) element.&lt;/a&gt;</code></td>
             </tr>
             <tr>
-              <th>selector</th>
+              <th class="headingText">selector</th>
               <td>CSS</td>
               <td>To "select" specific elements in order to style them.</td>
               <td><code>.thisPeriodSymbolIsAClassSelector {...</code></td>
             </tr>
             <tr>
-              <th>property</th>
+              <th class="headingText">property</th>
               <td>CSS</td>
               <td>To specify which part of an element to style.</td>
               <td>Just the property name and its value<br><pre><code>#example {<br>&#9;pretend-property: pretend-property-value;<br>&#9;background-color: gray;<br>}</code></pre></td>
             </tr>
             <tr>
-              <th>declaration</th>
+              <th class="headingText">declaration</th>
               <td>CSS</td>
               <td>To assign a value to a property and style specific parts of an element.</td>
               <td>Includes the property, a colon, the value, and a semicolon.<br><pre><code>#example {<br>&#9;background-color: lilac;<br>}</code></pre></td>
             </tr>
             <tr>
-              <th>object</th>
+              <th class="headingText">object</th>
               <td>JavaScript</td>
               <td>To contain multiple pieces of related data. And to provide functions that can work with the specific properties of the object.</td>
               <td><pre><code>let developer = {<br>&#9;name: "Katie";<br>&#9;age: 18;<br>&#9;school: "Johnson County Community College";<br>}</code></pre></td>
             </tr>
             <tr>
-              <th>method</th>
+              <th class="headingText">method</th>
               <td>JavaScript</td>
               <td>To create a reusable set of instructions for the webpage to execute. Methods can receive and/or update object property values.</td>
               <td><pre><code>function addNumbers(let x, let y) {<br>&#9;return x + y;<br>}</code></pre></td>
             </tr>
             <tr>
-              <th>event</th>
+              <th class="headingText">event</th>
               <td>JavaScript</td>
               <td>To trigger something to happen when the event occurs. Usually by executing a method.</td>
               <td><code>thingThatEventHappensTo.eventName(statement/function);<br>document.onload(console.log("The page has loaded"));</code></td>
             </tr>
             <tr>
-              <th>property</th>
+              <th class="headingText">property</th>
               <td>JavaScript</td>
               <td>To specify and allow access to a piece of data in an object.</td>
               <td><code>someObject.somePropertyName<br>window.innerWidth</code></td>
@@ -202,22 +204,31 @@
         <ul>
           <li>What is the general purpose for each language?
             <ul>
-              <li>JavaScript - </li>
-              <li>Java - </li>
+              <li>JavaScript - To make website interactive.</li>
+              <li>Java - To make apps and programs.</li>
             </ul>
           </li>
           <li>Strict vs. loose variable typing - what does this mean as it relates to Java and JavaScript?
-            <li>JavaScript - </li>
-            <li>Java - </li>
+            <ul>
+              <li>JavaScript - variables do not need to have a specified type when declared. So JavaScript is a loosely typed language.</li>
+              <li>Java - variables <b>do</b> need to have a specified type when declared. Java is a strictly typed language.</li>
+            </ul>
           </li>
           <li>Where is the source code for each language compiled or interpreted?
             <ul>
-              <li>JavaScript - </li>
-              <li>Java - </li>
+              <li>JavaScript - Interpreted in the browser.</li>
+              <li>Java - Compiled and run on a JVM (Java Virtual Machine).</li>
             </ul>
           </li>
         </ul>
       </section>
     </main>
+
+    <section id="container">
+      <button type="button" name="closeCellContainer" id="closeCellContainer">&times;</button>
+      <div id="cellContainer"></div>
+    </section>
+
+    <script src="./project1.js"></script>
   </body>
 </html>
