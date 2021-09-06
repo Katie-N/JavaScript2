@@ -18,7 +18,7 @@ body {
   background-color: var(--main-bg-color);
 }
 
-.paragraph, td, li {
+.paragraph, p, td, li {
   font-family: 'Courier New', Courier;
 }
 
@@ -89,7 +89,7 @@ a:hover {
   table {
     table-layout: fixed;
   }
-  
+
   td {
     text-overflow: ellipsis;
     overflow: hidden;

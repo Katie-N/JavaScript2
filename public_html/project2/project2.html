@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Katie Nordberg">
+    <meta name="date" content="9/3/2021">
+    <title>Project 2</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="./project2.css">
+  </head>
+  <body>
+    <main>
+      <table>
+    		<tbody><tr>
+    			<th>JavaScript syntax characters</th>
+    			<th>description</th>
+    			<th>provide an example</th>
+    		</tr>
+    		<tr>
+    			<td>when do you use the semicolon ; </td>
+    			<td>used to terminate a full statement</td>
+    			<td><code>console.log("Hi World!");</code></td>
+    		</tr>
+    		<tr>
+    			<td>when do you use { curly braces }</td>
+    			<td>used to surround code blocks<br><br>
+    			also used to create a custom object (but we are not that far in class yet so I wanted to provide this example)</td>
+    			<td><pre><code>if (user === "Lisa") {<br>&nbsp;&nbsp;console.log("Hi Lisa!");<br>}</code></pre><br>
+    			<pre><code>const Lisa = {<br>&nbsp;&nbsp;name: 'Friedrichsen',<br>&nbsp;&nbsp;title: 'Professor',<br>&nbsp;&nbsp;school: 'JCCC'<br>}</code></pre></td>
+    		</tr>
+    		<tr>
+    			<td>how do you write a one-line comment</td>
+    			<td>used for short notes and comments</td>
+    			<td><code>// comment</code></td>
+    		</tr>
+    		<tr>
+    			<td>how do you write a multi-line comment</td>
+    			<td>used for long notes and descriptions</td>
+    			<td><code>/* Here is a<br>&nbsp;comment on more<br>&nbsp;than one line */</code></td>
+    		</tr>
+    		<tr>
+    			<td>how do you declare a variable</td>
+    			<td>used for creating variables which will store information</td>
+    			<td><code>let year = 2021</code></td>
+    		</tr>
+    		<tr>
+    			<td>how do you assign a textual value to a variable</td>
+    			<td>quotation marks ("") and apostrophes (''). Used to represent strings, words, and text</td>
+    			<td><code>let name = "Katie"</code></td>
+    		</tr>
+    		<tr>
+    			<td>when do you use 'apostrophes' vs. "quotation marks"	</td>
+    			<td>'' and "" both represent strings. The important thing is picking one and being consistent. Also, if you have a quote inside of a string with quotation marks, or if you have an apostrophe inside of a string with apostrophes, then you will have to escape that character so the string does not end.</td>
+    			<td><code>let sentence = 'Don\'t forget to escape your \'!';</code></td>
+    		</tr>
+    		<tr>
+    			<td>when do you use the backwards slash \</td>
+    			<td>used as an "escape" for characters with special meaning in JavaScript. This way special characters are still available for use</td>
+    			<td><code>let filepath = "C:\\Users\\Katie\\Desktop\\flower.png"</code><br>filepath evaluates as "C:\Users\Katie\Desktop\flower.png"</td>
+    		</tr>
+    		<tr>
+    			<td>what is the most straight forward way of creating an array? </td>
+    			<td>used to easily create and assign values to an array without using the <code>new</code> constructor</td>
+    			<td><code>let siblings = ["Luke", "Levi", "Liam", "Kylie"];</code></td>
+    		</tr>
+    	 </tbody>
+      </table>
+
+      <section>
+        <p id="p1">Johnson County Community College</p>
+        <p id="p2">Johnson County Community College</p>
+        <p id="p3">Johnson County Community College</p>
+        <p id="p4">Johnson County Community College</p>
+        <p id="p5">Johnson County Community College</p>
+        <p id="p6">Johnson County Community College</p>
+      </section>
+      <section>
+        <h3 class="headingText headingDivider">When does the JavaScript in this project run?</h3>
+        <p id="p7">Scripts will run depending on their placement in the HTML. If the script is linked in the head then it runs before the page loads. If the script is linked inside the body it will load once the browser reaches that line. And when the script is linked just before the body closes then the script will run after the page content has loaded.</p><br>
+        <h3 class="headingText headingDivider">Why can you + text with a number but not * text with a number in JavaScript?</h3>
+        <p id="p8">The + operator represents concatenation when used with a string. So the number is converted to a string and combined with the other string.<br>The * operator doesn't have any sort of special relationship with strings. So it tries to literally multiply a number with a string.</p><br>
+        <h3 class="headingText headingDivider">What is the difference between the <code>textContent</code> and <code>innerHTML</code> properties and why was it more appropriate to use <code>textContent</code> for this exercise?</h3>
+        <p id="p9"><code>textContent</code> accesses just the text inside an element whereas <code>innerHTML</code> accesses the whole HTML element including the text and the tags. Because we only needed the words and not the actual HTML element in this exercise we used <code>textContent</code></p><br>
+        <h3 class="headingText headingDivider">What is "automatic semicolon insertion" in JavaScript?</h3>
+        <p id="p10">JavaScript does not require semicolons after statements. So when there is a statement left without a semicolon the interpreter will intelligently add one in. This is called automatic semicolon insertion.</p><br>
+        <h3 class="headingText headingDivider">When is it OK to break a statement onto two lines in JavaScript without using special characters?</h3>
+        <p id="p11">When an operator is used you can end the line with the operator and continue the statement on the next line. Ex.<br><code>let sum = a + <br>b;</code><br>Or you can break an array up after a comma. Ex. <br><code>let fruit = ['apple',<br>'orange'];</code><br>The interpreter just needs to be able to tell that the statement isn't over yet.</p><br>
+        <h3 class="headingText headingDivider">How are tabs and spaces used and treated in JavaScript?</h3>
+        <p id="p12">They are ignored. Whitespace has no effect in JavaScript.</p><br>
+      </section>
+    </main>
+    <script src="./project2.js"></script>
+  </body>
+</html>
