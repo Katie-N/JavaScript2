@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Katie Nordberg">
+  <meta name="date" content="9/6/2021">
+  <meta name="source" content="JavaScript30 JS + CSS Clock">
+  <title>JS + CSS Clock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    <!-- Replaced divs with semantic tags. -->
+    <section class="clock">
+      <div class="clock-face">
+        <!-- Replaced unique classes with ids. -->
+        <div class="hand" id="hour-hand"></div>
+        <div class="hand" id="min-hand"></div>
+        <div class="hand" id="second-hand"></div>
+        <!-- Added the cap that connects the clock pieces in the center to tidy up the edges. -->
+        <div id="cap"></div>
+      </div>
+
+      <h1 class="clockNum" id="one">1</h1>
+      <h1 class="clockNum" id="two">2</h1>
+      <h1 class="clockNum" id="three">3</h1>
+      <h1 class="clockNum" id="four">4</h1>
+      <h1 class="clockNum" id="five">5</h1>
+      <h1 class="clockNum" id="six">6</h1>
+      <h1 class="clockNum" id="seven">7</h1>
+      <h1 class="clockNum" id="eight">8</h1>
+      <h1 class="clockNum" id="nine">9</h1>
+      <h1 class="clockNum" id="ten">10</h1>
+      <h1 class="clockNum" id="eleven">11</h1>
+      <h1 class="clockNum" id="twelve">12</h1>
+    </section>
+
+    <!-- Added in a mute button to avoid errors from the sound autoplying without
+    user interaction. I also added it because the sound gets pretty annoying. -->
+    <img src="unmuted.png" alt="unmuted" id="muteButton" class="muted">
+
+    <script src="script.js"></script>
+  </body>
+</html>
