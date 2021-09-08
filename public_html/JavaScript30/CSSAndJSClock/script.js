@@ -7,6 +7,7 @@ const hourHand = document.getElementById("hour-hand");
 /* I have never used audio in JavaScript/HTML before so this was very fun to work
 with. I had a bit of trouble trimming the two audio files to start at the same
 time. But once I got them evenly paced it all came together. */
+// Audio file source: Nagaty Studio - Track 4 - https://youtu.be/mBaum8T2OJc?t=40
 const highTick = new Audio('highTick.mp3');
 const lowTick = new Audio('lowTick.mp3');
 let unmuted = false;
@@ -14,6 +15,7 @@ let muteButton = document.getElementById("muteButton");
 
 /* Added mute button to avoid error when the sound tried to play before the user
 intercts with the page. It also got pretty annoying to hear the clicking constantly. */
+// Mute button image source: The Noun Project - https://thenounproject.com/term/speaker-button/899261/
 muteButton.addEventListener("click", () => {
   unmuted = !unmuted;
   muteButton.classList.toggle("muted");
@@ -52,12 +54,15 @@ function setDate() {
 
   const hours = now.getHours();
   const hoursDegrees = ((hours / 12) * 360) + 90;
+  /* A regular clock moves as the hour progresses - not once every hour. So I
+  have made the hour hand change every minute instead of every hour. */
+  const accurateHoursDegrees = (hoursDegrees + ((minutes / 60) * (360 / 12)));
   if (hoursDegrees == 90) {
     hourHand.classList.add("no-transition");
   } else {
     hourHand.classList.remove("no-transition");
   }
-  hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+  hourHand.style.transform = `rotate(${accurateHoursDegrees}deg)`;
 }
 
 setInterval(setDate, 1000);

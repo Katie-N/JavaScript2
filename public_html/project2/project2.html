@@ -10,6 +10,31 @@
   </head>
   <body>
     <main>
+      <section>
+        <p id="q1">What do you mean by <a href="http://students.jccc.edu/lisalfri/web124/124Projects/Chapter2/2.html">"Key the code exercises throughout chapter 2"</a>? It's the second instruction on the page.</p>
+        <br><br>
+        <p id="q2">I have been working on the CSS and JS clock from JavaScript30 and I want to make it look like a stereotypical/classic/traditional clock. So I've made the second hand
+        red and thin. Now I want to make the hour hand short and stubby. But when I change the
+        width of the hand to less than 50% in CSS the hand recenters. I want the width to be
+        taken off the edge rather than equally off both sides. (Hopefully that makes sense.)
+        <br>
+        I've tried <code>transform: translateX(-50%);</code> But that didn't even affect it.
+        <br>
+        I actually solved this while writing this question. I just had to add the property
+        <code>right: 50%;</code> since it's absolutely positioned. Thought I should go ahead
+        and still post though.</p>
+        <br><br>
+        <p id="q3">Is there a simple way to spread the numbers on the clock out in a circle?
+          Almost like using justify-between but also with the y plane. What would the formula be?
+          I worked out that I could position each number individually using a combination of
+          calc(50% / 4) and calc(50% / 2) and switching out the properties top, bottom, left,
+          and right. As well as repositioning the number with transform: translateX/Y(50%/-50%)
+          I just wonder if there is a simpler method to position them with JavaScript rather
+          than manually writing out the CSS.<br><br>
+          Ex. of my code</p>
+          <br>
+          <pre><code>#one {<br>&nbsp;&nbsp;top: calc(50% / 4);<br>&nbsp;&nbsp;right: calc(50% / 2);&nbsp;<br>&nbsp;&nbsp;transform: translateY(-50%);<br>}</code></pre>
+      </section>
       <table>
     		<tbody><tr>
     			<th>JavaScript syntax characters</th>
