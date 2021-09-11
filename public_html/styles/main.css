@@ -43,76 +43,21 @@ main > * {
   margin-top: 2rem;
 }
 
-table {
-  width: 100%;
-  /* table-layout: fixed; */
-}
-
-th, td {
-  border: 2px solid var(--accent-color);
-  padding: 1rem;
-}
-
-td {
-  font-size: 0.75rem;
-  text-align: center;
-  overflow-x: hidden;
-}
-
 code {
   color: var(--main-bg-color);
   background-color: var(--dark-accent-color);
   border-radius: 10%;
 }
 
-ol {
-  list-style-position: inside;
-}
-
-li > ul, li > ol {
-  margin-left: 1rem;
-}
-
-a, a:visited, a:active {
-  color: inherit;
-}
-
-a:hover {
-  font-size: 125%;
-}
-
 @media only screen and (max-width: 768px) {
   main {
     width: 85vw;
-  }
-
-  table {
-    table-layout: fixed;
-  }
-
-  td {
-    text-overflow: ellipsis;
-    overflow: hidden;
   }
 }
 
 @media only screen and (max-width: 600px) {
   main {
     width: 90vw;
-  }
-
-  th, td {
-    padding: 0.25rem;
-  }
-
-  td {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  th.headingText {
-    font-size: 0.75rem;
   }
 
   .headingText {

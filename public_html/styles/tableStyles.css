@@ -1,0 +1,40 @@
+table {
+  width: 100%;
+  /* table-layout: fixed; */
+}
+
+th, td {
+  border: 2px solid var(--accent-color);
+  padding: 1rem;
+}
+
+td {
+  font-size: 0.75rem;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  table {
+    table-layout: fixed;
+  }
+
+  td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  th, td {
+    padding: 0.25rem;
+  }
+
+  td {
+    white-space: nowrap;
+  }
+
+  th.headingText {
+    font-size: 0.75rem;
+  }
+}
