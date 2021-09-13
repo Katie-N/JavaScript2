@@ -1,0 +1,13 @@
+{
+  "state": "Kansas",
+  "petsPercentage": 62.8,
+  "dogPercentage": 43.1,
+  "catPercentage": 32.4
+},
+
+{
+  "state": "Missouri",
+  "petsPercentage": 63.5,
+  "dogPercentage": 45.1,
+  "catPercentage": null
+}
