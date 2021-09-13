@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Katie Nordberg">
+    <meta name="date" content="9-11-2021">
+    <title>Project 3</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/tableStyles.css">
+    <link rel="stylesheet" href="./project3.css">
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>Questions</h1>
+        <p id="q1"></p>
+        <p id="q2"></p>
+        <p id="q3"></p>
+      </section>
+
+      <section>
+        <h1>JavaScript Variable Names</h1>
+        <table>
+      		<tbody>
+            <tr>
+        			<th>variable name</th>
+        			<th>valid? yes or no</th>
+        			<th>If NOT valid, why NOT? If valid, from a best practices standpoint, is this a good variable name or not?
+        			If NOT, why NOT?</th>
+        		</tr>
+        		<tr>
+        			<th><code>JCCC</code></th>
+        			<td>Yes</td>
+        			<td>All caps denote constants so if that isn't what you want then try another name.</td>
+        		</tr>
+        		<tr>
+        			<th><code>$JCCC</code></th>
+        			<td>Yes</td>
+        			<td>Though you can start a variable name with a dollar sign there is no good reason to. It makes the variable name more complicated than it should be, especially because the dollar sign is not expressing extra information.</td>
+        		</tr>
+        		<tr>
+        			<th><code>_JCCC</code></th>
+        			<td>Yes</td>
+        			<td>Though you can start a variable name with an underscore there is not really a good reason to. It makes the variable name more complicated especially if there is nothing special you are trying to get across with the underscore.</td>
+        		</tr>
+        		<tr>
+        			<th><code>%JCCC</code></th>
+        			<td>No</td>
+        			<td>The % is not allowed in JavaScript variable names.</td>
+        		</tr>
+        		<tr>
+        			<th><code>1jccc</code></th>
+        			<td>No</td>
+        			<td>Numbers can be used in variable names but they cannot be the first character.</td>
+        		</tr>
+        		<tr>
+        			<th><code>jccc</code></th>
+        			<td>Yes</td>
+        			<td>This is fine because it is one word</td>
+        		</tr>
+        		<tr>
+        			<th><code>jccc-ks</code></th>
+        			<td>No</td>
+        			<td>Dashes are not allowed in JavaScript variables.</td>
+        		</tr>
+        		<tr>
+        			<th><code>jccc.ks</code></th>
+        			<td>No</td>
+        			<td>Not valid because periods are not allowed in JavaScript variables. Dot notation indicates that you are accessing a property of the thing you apply the period to. Since it is a variable and not an object with properties <code>jccc.ks</code> is not a valid variable name.</td>
+        		</tr>
+        		<tr>
+        			<th><code>var</code></th>
+        			<td>No</td>
+        			<td>var is a keyword in JavaScript which means it's reserved and cannot be used as a variable name.</td>
+        		</tr>
+        		<tr>
+        			<th><code>function</code></th>
+        			<td>No</td>
+        			<td><code>function</code> is a keyword in JavaScript which means it's reserved and cannot be used as a variable name.</td>
+        		</tr>
+        		<tr>
+        			<th><code>streetaddress</code></th>
+        			<td>Yes</td>
+        			<td>Though valid, <code>streetaddress</code> is not a great variable name because it uses neither camel case or underscores to indicate separate words.</td>
+        		</tr>
+        		<tr>
+        			<th><code>streetAddress</code></th>
+        			<td>Yes</td>
+        			<td>Good coding style. Uses camel casing on a variable name with more than one word.</td>
+        		</tr>
+        		<tr>
+        			<th><code>StreetAddress</code></th>
+        			<td></td>
+        			<td>Capital letters that start a variable name usually denote an object</td>
+        		</tr>
+        		<tr>
+        			<th><code>street-Address</code></th>
+        			<td>No</td>
+        			<td>Not valid because it uses a dash. And bad practice even if it were valid because it uses both dashes and camel casing. Just pick one system and stick with it.</td>
+        		</tr>
+        	</tbody>
+        </table>
+      </section>
+
+      <section>
+        <h1 class="headingText headingDivider">JavaScript Arrays</h1>
+        <p id="p1">Web Development & Digital Media</p>
+        <p id="p2">Web Development & Digital Media</p>
+        <p id="p3">Web Development & Digital Media</p>
+        <p id="p4">Web Development & Digital Media</p>
+        <p id="p5">Web Development & Digital Media</p>
+        <p id="p6">Web Development & Digital Media</p>
+        <p id="p7">Web Development & Digital Media</p>
+        <p id="p8">Web Development & Digital Media</p>
+        <p id="p9">Web Development & Digital Media</p>
+        <script src="./project3.js"></script>
+      </section>
+
+      <section>
+        <h1 class="headingText headingDivider">Array Review Questions</h1>
+        <h3 class="separate">What is the difference between using "quotation marks" versus 'apostrophes' in JavaScript?</h3>
+        <p id="q10" class="separate">There is no difference. They both denote strings. It is important to note that if you use ' and have an apostraphe inside the string then you will need to escape it. And vice versa for ". But if you have an apostraphe inside a double quote then you won't have to escape anything. The same thing goes for the other way around.</p>
+        <h3 class="separate">What is the key difference between the innerHTML property and the textContent property?</h3>
+        <p id="q11" class="separate"><code>innerHTML</code> will include the element's children's html. But  <code>textContent</code> only includes the text of the element.</p>
+        <h3 class="separate">For a reference to a month, why might it make more sense to reference an array value vs. a variable?</h3>
+        <p id="q12" class="separate">Because months are related to each other. So connecting them together in an array makes sense. Especially because you can also add the relationship of ordering. As in January comes before February so you can order your array as such.</p>
+      </section>
+
+      <section>
+        <h1>Function Terminology</h1>
+        <table>
+    			<tbody>
+            <tr>
+      				<th>term</th>
+      				<th>definition</th>
+      			</tr>
+      			<tr>
+      				<th><span>function</span></th>
+      				<td>A set of intructions which can be reused.</td>
+      			</tr>
+      			<tr>
+      				<th><span>statement</span></th>
+      				<td>An instruction. Like a variable declaration or an expression.</td>
+      			</tr>
+      			<tr>
+      				<th><span>parameter</span></th>
+      				<td>Placeholders for values in a function which will be replaced with arguments once the function is called.</td>
+      			</tr>
+      			<tr>
+      				<th><span>argument</span></th>
+      				<td>A value which is passed as a parameter to a function.</td>
+      			</tr>
+      			<tr>
+      				<th><span>return value</span></th>
+      				<td>The calculation that is done within a function and is then "returned" to wherever the function was called.</td>
+      			</tr>
+      			<tr>
+      				<th><span>function declaration</span></th>
+      				<td>Where the function name and its parameters are stated - or "declared".</td>
+      			</tr>
+      			<tr>
+      				<th><span>function expression</span></th>
+      				<td>A function inside an expression. Like when a variable is declared it can be defined to equal a function. That makes the function a function expression.</td>
+      			</tr>
+      			<tr>
+      				<th><span>anonymous function</span></th>
+      				<td>A function that does not have a name and so cannot be called directly later.</td>
+      			</tr>
+      			<tr>
+      				<th><span>immediately invoked function expression</span></th>
+      				<td>A function that runs right away. It runs once the browser has reached its definition.</td>
+      			</tr>
+      		</tbody>
+        </table>
+      </section>
+
+      <section>
+        <h1 class="headingText headingDivider">Function Review Questions</h1>
+        <h3 class="headingText separate">How do you call a function named <code>showTotal</code>
+          if it doesn't have any parameters?</h3>
+        <p id="f1" class="separate">Call it with empty parentheses: <code>showTotal();</code></p>
+
+        <h3 class="headingText separate">How do you call a function named <code>showTotal</code>
+          if it has two parameters named <code>tax</code> and <code>total</code>
+          and you wish to pass the number 2 as an argument to the <code>tax</code>
+          parameter and 10 as an argument to the <code>total</code> parameter?</h3>
+        <p id="f2" class="separate"><code>showTotal(2, 10);</code></p>
+
+        <h3 class="headingText separate">How do you call a function named <code>showTotal</code>
+         if it has two parameters named <code>tax</code> and total and you wish to pass the
+         variable <code>stateTax</code> as an argument to the <code>tax</code> parameter and
+         <code>totalBeforeTax</code> as an argument to the <code>total</code> parameter?</h3>
+        <p id="f3" class="separate"><code>showTotal(stateTax, totalBeforeTax);</code></p>
+
+        <h3 class="separate">What JavaScript keyword is used to create a block-level variable?</h3>
+        <p id="s3" class="separate">You may have block level variables in strict mode if you declare them with <code>let</code> or <code>const</code>. They will have a block level scope inside of the scope they were defined in.</p>
+      </section>
+
+
+      <section>
+        <h1 class="headingText headingDivider">Variable Scope Questions</h1>
+        <h3 class="headingText separate">What JavaScript statement forces you to explicitly
+          declare all variables, and where is it placed?</h3>
+        <p id="s1" class="separate"><code>"use strict";</code> and it is placed inside the scope that you want
+          strict mode to apply to. If it is placed at the top of the JS file then strict mode is
+          used globally.</p>
+        <h3 class="headingText separate">What are two ways to create a global (window-level) variable?</h3>
+        <p id="s2">1. Declare outside of any functions (usually at the top of the file).
+          <br>
+          2.
+        </p>
+      </section>
+
+      <section>
+        <h1></h3>
+        <table>
+    			<tbody>
+            <tr>
+      				<th>term</th>
+      				<th>definition</th>
+      			</tr>
+      			<tr>
+      				<th><span>object</span></th>
+      				<td>A complex "thing" that is represented by many different features. Like things it can do (methods) or traits it has (properties).</td>
+      			</tr>
+      			<tr>
+      				<th><span>property</span></th>
+      				<td>A characteristic or piece of data about the object.</td>
+      			</tr>
+      			<tr>
+      				<th><span>method</span></th>
+      				<td>A set of statements to execute that relate to the object in some way and so are defined within the object.</td>
+      			</tr>
+      			<tr>
+      				<th><span>key</span></th>
+      				<td></td>
+      			</tr>
+      			<tr>
+      				<th><span>literal notation</span></th>
+      				<td></td>
+      			</tr>
+      			<tr>
+      				<th><span>dot notation</span></th>
+      				<td>Accessing the properties and methods of an object using the name of the object period and then thing you want to access.</td>
+      			</tr>
+      			<tr>
+      				<th><span>constructor notation</span></th>
+      				<td></td>
+      			</tr>
+      			<tr>
+      				<th><span>this</span></th>
+      				<td></td>
+      			</tr>
+      			<tr>
+      				<th><span>undefined</span></th>
+      				<td></td>
+      			</tr>
+      		</tbody>
+        </table>
+      </section>
+
+      <section>
+        <h1 class="headingText headingDivider">User-Created Object Questions</h1>
+        <h3 class="separate">What is the benefit of using literal notation over constructor notation to create an object?</h3>
+        <p id="j1"></p>
+
+        <h3 class="separate">What is the benefit of using constructor notation over literal notation to create an object?</h3>
+        <p id="2"></p>
+
+        <h3 class="separate">If a function is created in the global scope, what does this refer to?</h3>
+        <p id="3"></p>
+
+        <h3 class="separate">If a function is created within an object, the function becomes a method of that object. In that case, what does this refer to?</h3>
+        <p id="4"></p>
+      </section>
+
+      <section>
+        <h1></h1>
+        <table>
+    			<tbody>
+            <tr>
+      				<th></th>
+      				<th><span>Browser</span></th>
+      				<th><span>Document</span></th>
+      				<th><span>Global String</span></th>
+      				<th><span>Global Number</span></th>
+      				<th><span>Global Math</span></th>
+      				<th><span>Global Date</span></th>
+      			</tr>
+      			<tr>
+      				<td>Example of a common method for that object</td>
+      				<td></td>
+      				<td></td>
+      				<td></td>
+      				<td></td>
+      				<td></td>
+      				<td></td>
+      			</tr>
+      			<tr>
+      				<td>Explanation of example</td>
+      				<td></td>
+      				<td></td>
+      				<td></td>
+      				<td></td>
+      				<td></td>
+      				<td></td>
+      			</tr>
+      		</tbody>
+        </table>
+      </section>
+
+      <section>
+        <h1></h1>
+        <table>
+    			<tbody>
+            <tr>
+      				<th></th>
+      				<th><span>String</span></th>
+      				<th><span>Number</span></th>
+      				<th><span>Boolean</span></th>
+      				<th><span>Undefined</span></th>
+      				<th><span>Null</span></th>
+      			</tr>
+      			<tr>
+      				<td>Provide an example of how to declare a variable with each of these data types.</td>
+      				<td><code>let sentence = "I am a string";</code></td>
+      				<td><code>let age = 18</code></td>
+      				<td><code>let ticked = false</code></td>
+      				<td><code>let </code></td>
+      				<td><code>let num1 = null</code></td>
+      			</tr>
+      		</tbody>
+        </table>
+      </section>
+
+    </main>
+  </body>
+</html>
