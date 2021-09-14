@@ -1,14 +1,290 @@
 [
   {
+    "state": "Alabama",
+    "petsPercentage": 59.8,
+    "dogPercentage": 46.9,
+    "catPercentage": 26.1
+  },
+  {
+    "state": "Arizona",
+    "petsPercentage": 58,
+    "dogPercentage": 43,
+    "catPercentage": 26.4
+  },
+  {
+    "state": "Arkansas",
+    "petsPercentage": 69,
+    "dogPercentage": 51.6,
+    "catPercentage": 34.8
+  },
+  {
+    "state": "California",
+    "petsPercentage": 40.1,
+    "dogPercentage": 27.1,
+    "catPercentage": null
+  },
+  {
+    "state": "Colorado",
+    "petsPercentage": 47.2,
+    "dogPercentage": 40,
+    "catPercentage": 22.9
+  },
+  {
+    "state": "Connecticut",
+    "petsPercentage": 49.9,
+    "dogPercentage": 24,
+    "catPercentage": 26.7
+  },
+  {
+    "state": "Delaware",
+    "petsPercentage": 57.9,
+    "dogPercentage": 42.2,
+    "catPercentage": 24.1
+  },
+  {
+    "state": "Florida",
+    "petsPercentage": 56,
+    "dogPercentage": 39.8,
+    "catPercentage": 24.2
+  },
+  {
+    "state": "Georgia",
+    "petsPercentage": 51.1,
+    "dogPercentage": 36.7,
+    "catPercentage": 20.4
+  },
+  {
+    "state": "Idaho",
+    "petsPercentage": 69.9,
+    "dogPercentage": 33.3,
+    "catPercentage": 34.4
+  },
+  {
+    "state": "Illinois",
+    "petsPercentage": 48.6,
+    "dogPercentage": 32.4,
+    "catPercentage": 21
+  },
+  {
+    "state": "Indiana",
+    "petsPercentage": 69.2,
+    "dogPercentage": 49.4,
+    "catPercentage": 37.5
+  },
+  {
+    "state": "Iowa",
+    "petsPercentage": 59.4,
+    "dogPercentage": 36.3,
+    "catPercentage": 35.6
+  },
+  {
     "state": "Kansas",
     "petsPercentage": 62.8,
     "dogPercentage": 43.1,
     "catPercentage": 32.4
   },
   {
+    "state": "Kentucky",
+    "petsPercentage": 64.1,
+    "dogPercentage": 46.5,
+    "catPercentage": 32.2
+  },
+  {
+    "state": "Louisiana",
+    "petsPercentage": 54.4,
+    "dogPercentage": 38.3,
+    "catPercentage": 19
+  },
+  {
+    "state": "Maine",
+    "petsPercentage": 63.5,
+    "dogPercentage": 35.9,
+    "catPercentage": 43.6
+  },
+  {
+    "state": "Maryland",
+    "petsPercentage": 48.6,
+    "dogPercentage": 30.2,
+    "catPercentage": 18.6
+  },
+  {
+    "state": "Massachusetts",
+    "petsPercentage": 49.4,
+    "dogPercentage": 28.9,
+    "catPercentage": 23.5
+  },
+  {
+    "state": "Michigan",
+    "petsPercentage": 62.4,
+    "dogPercentage": 41.9,
+    "catPercentage": 31.2
+  },
+  {
+    "state": "Minnesota",
+    "petsPercentage": 54,
+    "dogPercentage": 35.5,
+    "catPercentage": 26.5
+  },
+  {
+    "state": "Mississippi",
+    "petsPercentage": 65.5,
+    "dogPercentage": 51,
+    "catPercentage": 29.1
+  },
+  {
     "state": "Missouri",
     "petsPercentage": 63.5,
     "dogPercentage": 45.1,
     "catPercentage": null
+  },
+  {
+    "state": "Montana",
+    "petsPercentage": 61.9,
+    "dogPercentage": 51.9,
+    "catPercentage": 22.8
+  },
+  {
+    "state": "Nebraska",
+    "petsPercentage": 51.3,
+    "dogPercentage": 47.1,
+    "catPercentage": 30.9
+  },
+  {
+    "state": "Nevada",
+    "petsPercentage": 53.3,
+    "dogPercentage": 36.8,
+    "catPercentage": 23.1
+  },
+  {
+    "state": "New Hampshire",
+    "petsPercentage": 51.8,
+    "dogPercentage": 23.7,
+    "catPercentage": 36.4
+  },
+  {
+    "state": "New Jersey",
+    "petsPercentage": 47.4,
+    "dogPercentage": 29.1,
+    "catPercentage": 18.9
+  },
+  {
+    "state": "New Mexico",
+    "petsPercentage": 60.1,
+    "dogPercentage": 39.4,
+    "catPercentage": 25.2
+  },
+  {
+    "state": "New York",
+    "petsPercentage": 49.7,
+    "dogPercentage": 27,
+    "catPercentage": 21.1
+  },
+  {
+    "state": "North Carolina",
+    "petsPercentage": 58.6,
+    "dogPercentage": 41.3,
+    "catPercentage": 26.5
+  },
+  {
+    "state": "North Dakota",
+    "petsPercentage": 63.7,
+    "dogPercentage": 44.3,
+    "catPercentage": 24.8
+  },
+  {
+    "state": "Ohio",
+    "petsPercentage": 62.4,
+    "dogPercentage": 37.9,
+    "catPercentage": 30.7
+  },
+  {
+    "state": "Oklahoma",
+    "petsPercentage": 65,
+    "dogPercentage": 47.7,
+    "catPercentage": 38.4
+  },
+  {
+    "state": "Oregon",
+    "petsPercentage": 59.2,
+    "dogPercentage": 37.8,
+    "catPercentage": 30
+  },
+  {
+    "state": "Pennsylvania",
+    "petsPercentage": 60.6,
+    "dogPercentage": 38.9,
+    "catPercentage": 29.9
+  },
+  {
+    "state": "Rhode Island",
+    "petsPercentage": 45.4,
+    "dogPercentage": 25.8,
+    "catPercentage": 16.7
+  },
+  {
+    "state": "South Carolina",
+    "petsPercentage": 62,
+    "dogPercentage": 45.3,
+    "catPercentage": 25.2
+  },
+  {
+    "state": "South Dakota",
+    "petsPercentage": 46.4,
+    "dogPercentage": 32.1,
+    "catPercentage": 26.6
+  },
+  {
+    "state": "Tennessee",
+    "petsPercentage": 61.7,
+    "dogPercentage": 47,
+    "catPercentage": 30.9
+  },
+  {
+    "state": "Texas",
+    "petsPercentage": 58.2,
+    "dogPercentage": 43.4,
+    "catPercentage": 20.5
+  },
+  {
+    "state": "Utah",
+    "petsPercentage": 58.5,
+    "dogPercentage": 36.2,
+    "catPercentage": 24.7
+  },
+  {
+    "state": "Vermont",
+    "petsPercentage": 70,
+    "dogPercentage": 28.3,
+    "catPercentage": 44.6
+  },
+  {
+    "state": "Virginia",
+    "petsPercentage": 55.5,
+    "dogPercentage": 35.6,
+    "catPercentage": 23.9
+  },
+  {
+    "state": "Washington",
+    "petsPercentage": 62.7,
+    "dogPercentage": 42.8,
+    "catPercentage": 30.5
+  },
+  {
+    "state": "West Virginia",
+    "petsPercentage": 70.7,
+    "dogPercentage": 49.6,
+    "catPercentage": 37.7
+  },
+  {
+    "state": "Wisconsin",
+    "petsPercentage": 59,
+    "dogPercentage": 33.6,
+    "catPercentage": 32.4
+  },
+  {
+    "state": "Wyoming",
+    "petsPercentage": 71.8,
+    "dogPercentage": 36,
+    "catPercentage": 30
   }
 ]
