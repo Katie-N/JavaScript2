@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.highlight {
+  background-color: var(--accent-color);
+}
+
+ul {
+  list-style: circle;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  min-height: 5vh;
+  background-color: var(--dark-accent-color);
+}
+
+.credits {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+}

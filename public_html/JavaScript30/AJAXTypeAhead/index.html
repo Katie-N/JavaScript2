@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta name="author" content="Katie Nordberg">
     <meta name="date" content="9-13-2021">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Type Ahead</title>
-    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <form class="search-form">
-      <input type="text" class="search" placeholder="State or Animal">
-      <ul class="suggestions">
-        <li>Filter for a state</li>
-        <li>or a pet</li>
-      </ul>
-    </form>
+    <main>
+      <h1 class="headingText headingDivider">Check Out the Percentage of Pet Owners in Your State!</h1>
+      <!-- Since there is only one of each of these I changed them from classes to ids.  -->
+      <!-- I turned off autocomplete so it is easier to see the results -->
+      <form id="search-form" autocomplete="off">
+        <input type="text" id="search" placeholder="State or Animal">
+        <ul id="suggestions">
+          <li>Filter for a state</li>
+          <li>or a pet</li>
+        </ul>
+      </form>
+    </main>
+
+    <footer>
+      <a href="https://www.pawlicy.com/blog/us-pet-ownership-statistics/" class="credits">Statistics collected from Pawlicy.</a>
+      <a href="https://www.codegrepper.com/code-examples/javascript/remove+special+characters+from+string+javascript">Function to Clean a String</a>
+    </footer>
+
     <script src="./script.js"></script>
   </body>
 </html>
