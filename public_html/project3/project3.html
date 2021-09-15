@@ -7,19 +7,22 @@
     <title>Project 3</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/tableStyles.css">
+    <link rel="stylesheet" href="../styles/enlargeCell.css">
     <link rel="stylesheet" href="./project3.css">
   </head>
   <body>
     <main>
-      <section>
-        <h1>Questions</h1>
-        <p id="q1"></p>
-        <p id="q2"></p>
-        <p id="q3"></p>
+      <section class="separate">
+        <h1 class="separate headingText headingDivider">Questions</h1>
+        <p id="q1" class="separate">I am working on the <a href="https://courses.wesbos.com/account/access/61363ae7b36fe451adb8d5f9/view/194130156">AJAX Type Ahead project</a> and I am having trouble finding a good JSON file to work from. Is there a dedicated website that hosts open data/free to use JSON files? Or do people mainly make their own JSON files?</p>
+
+        <p id="q2" class="separate">Whenever I have long code in the tables they will expand the table to go way off page. This is not what I want. So I've been looking at different options for breaking up the code as necessary. But I would like to use CSS for this since it is made for styling things. And I have found <a href="https://css-tricks.com/where-lines-break-is-complicated-heres-all-the-related-css-and-html/">this article</a> all about it.I want the code to wrap only if absolutely necessary to keep the table from going out of the main section on my page. But if it is able to wrap the whole word to the next line that would be ideal. Right now I am making use of the <code>word-break: break-word;</code> property. Is there a better property you know of? Even with the word breaking, the table still goes off-screen a bit before the media query conditions are met.</p>
+
+        <p id="q3" class="separate"><a href="https://courses.wesbos.com/account/access/61363ae7b36fe451adb8d5f9/view/194130156">In the AJAX Type Ahead project from JavaScript30</a> I want to also match any searches where the population (or in my case, the percentage) is at or above the searched number. But I can't just return <code>state.petsPercentage.match(state.petsPercentage > regex);</code> because match only takes a RegExp. I'm stuck as to how to proceed.</p>
       </section>
 
-      <section>
-        <h1>JavaScript Variable Names</h1>
+      <section class="separate">
+        <h1 class="separate headingText headingDivider">JavaScript Variable Names</h1>
         <table>
       		<tbody>
             <tr>
@@ -36,12 +39,12 @@
         		<tr>
         			<th><code>$JCCC</code></th>
         			<td>Yes</td>
-        			<td>Though you can start a variable name with a dollar sign there is no good reason to. It makes the variable name more complicated than it should be, especially because the dollar sign is not expressing extra information.</td>
+        			<td>Though you can start a variable name with a dollar sign, there is no good reason to. It makes the variable name more complicated than it should be, especially because the dollar sign is not expressing extra information.</td>
         		</tr>
         		<tr>
         			<th><code>_JCCC</code></th>
         			<td>Yes</td>
-        			<td>Though you can start a variable name with an underscore there is not really a good reason to. It makes the variable name more complicated especially if there is nothing special you are trying to get across with the underscore.</td>
+        			<td>Though you can start a variable name with an underscore there is not really a good reason to. It makes the variable name more complicated, especially if there is nothing special you are trying to get across with the underscore.</td>
         		</tr>
         		<tr>
         			<th><code>%JCCC</code></th>
@@ -86,12 +89,12 @@
         		<tr>
         			<th><code>streetAddress</code></th>
         			<td>Yes</td>
-        			<td>Good coding style. Uses camel casing on a variable name with more than one word.</td>
+        			<td>Good coding style. Uses camelCase on a variable name with more than one word.</td>
         		</tr>
         		<tr>
         			<th><code>StreetAddress</code></th>
-        			<td></td>
-        			<td>Capital letters that start a variable name usually denote an object</td>
+        			<td>Yes</td>
+        			<td>This is called PascalCase and is a valid coding style. It is not as common as camelCase though and should not be used in conjunction with it. It is also not good to have both <code>streetAddress</code> and <code>StreetAddress</code> because they are separate variables but it is not user-friendly to recognize them as such.</td>
         		</tr>
         		<tr>
         			<th><code>street-Address</code></th>
@@ -102,7 +105,7 @@
         </table>
       </section>
 
-      <section>
+      <section class="separate">
         <h1 class="headingText headingDivider">JavaScript Arrays</h1>
         <p id="p1">Web Development & Digital Media</p>
         <p id="p2">Web Development & Digital Media</p>
@@ -113,10 +116,9 @@
         <p id="p7">Web Development & Digital Media</p>
         <p id="p8">Web Development & Digital Media</p>
         <p id="p9">Web Development & Digital Media</p>
-        <script src="./project3.js"></script>
       </section>
 
-      <section>
+      <section class="separate">
         <h1 class="headingText headingDivider">Array Review Questions</h1>
         <h3 class="separate">What is the difference between using "quotation marks" versus 'apostrophes' in JavaScript?</h3>
         <p id="q10" class="separate">There is no difference. They both denote strings. It is important to note that if you use ' and have an apostraphe inside the string then you will need to escape it. And vice versa for ". But if you have an apostraphe inside a double quote then you won't have to escape anything. The same thing goes for the other way around.</p>
@@ -126,8 +128,8 @@
         <p id="q12" class="separate">Because months are related to each other. So connecting them together in an array makes sense. Especially because you can also add the relationship of ordering. As in January comes before February so you can order your array as such.</p>
       </section>
 
-      <section>
-        <h1>Function Terminology</h1>
+      <section class="separate">
+        <h1 class="separate headingText headingDivider">Function Terminology</h1>
         <table>
     			<tbody>
             <tr>
@@ -136,7 +138,7 @@
       			</tr>
       			<tr>
       				<th><span>function</span></th>
-      				<td>A set of intructions which can be reused.</td>
+      				<td>A set of instructions which can be reused.</td>
       			</tr>
       			<tr>
       				<th><span>statement</span></th>
@@ -160,7 +162,7 @@
       			</tr>
       			<tr>
       				<th><span>function expression</span></th>
-      				<td>A function inside an expression. Like when a variable is declared it can be defined to equal a function. That makes the function a function expression.</td>
+      				<td>A function inside an expression. Like when a variable is declared, it can be defined to equal a function. That makes the function a function expression.</td>
       			</tr>
       			<tr>
       				<th><span>anonymous function</span></th>
@@ -174,7 +176,7 @@
         </table>
       </section>
 
-      <section>
+      <section class="separate">
         <h1 class="headingText headingDivider">Function Review Questions</h1>
         <h3 class="headingText separate">How do you call a function named <code>showTotal</code>
           if it doesn't have any parameters?</h3>
@@ -197,7 +199,7 @@
       </section>
 
 
-      <section>
+      <section class="separate">
         <h1 class="headingText headingDivider">Variable Scope Questions</h1>
         <h3 class="headingText separate">What JavaScript statement forces you to explicitly
           declare all variables, and where is it placed?</h3>
@@ -207,12 +209,12 @@
         <h3 class="headingText separate">What are two ways to create a global (window-level) variable?</h3>
         <p id="s2">1. Declare outside of any functions (usually at the top of the file).
           <br>
-          2.
+          2. Declaring a variable inside a function but not using var, const, or let.
         </p>
       </section>
 
-      <section>
-        <h1></h3>
+      <section class="separate">
+        <h1 class="separate headingText headingDivider">Object Terminology</h1>
         <table>
     			<tbody>
             <tr>
@@ -233,49 +235,49 @@
       			</tr>
       			<tr>
       				<th><span>key</span></th>
-      				<td></td>
+      				<td>The name of a property. The name in a name/value pair.</td>
       			</tr>
       			<tr>
       				<th><span>literal notation</span></th>
-      				<td></td>
+      				<td>Easy way to create an object. Use curly braces and then list the different properties and methods of the object separated by a comma.</td>
       			</tr>
       			<tr>
       				<th><span>dot notation</span></th>
-      				<td>Accessing the properties and methods of an object using the name of the object period and then thing you want to access.</td>
+      				<td>Accessing the properties and methods of an object using the name of the object period and then the thing you want to access.</td>
       			</tr>
       			<tr>
       				<th><span>constructor notation</span></th>
-      				<td></td>
+      				<td>Used to create an empty object with the new keyword and Object() constructor. Then you add properties and methods individually later. Usually used when there will be multiple objects with the same properties and methods.</td>
       			</tr>
       			<tr>
       				<th><span>this</span></th>
-      				<td></td>
+      				<td>Used to represent the current instance of an object in a method.</td>
       			</tr>
       			<tr>
       				<th><span>undefined</span></th>
-      				<td></td>
+      				<td>A value for when you don't have a value. Sometimes used when the property value is unknown and will be added later. Or when the property value doesn't exist at all, though in this case it would be better to use <code>null</code>.</td>
       			</tr>
       		</tbody>
         </table>
       </section>
 
-      <section>
+      <section class="separate">
         <h1 class="headingText headingDivider">User-Created Object Questions</h1>
         <h3 class="separate">What is the benefit of using literal notation over constructor notation to create an object?</h3>
-        <p id="j1"></p>
+        <p id="j1" class="separate">It is easier because you do not have to deal with creating an empty object and then adding individual properties and methods. You can just jump straight into defining the properties and methods when you create the object.</p>
 
         <h3 class="separate">What is the benefit of using constructor notation over literal notation to create an object?</h3>
-        <p id="2"></p>
+        <p id="j2" class="separate">You can make multiple objects with the same properties and values just by calling the constructor object.</p>
 
-        <h3 class="separate">If a function is created in the global scope, what does this refer to?</h3>
-        <p id="3"></p>
+        <h3 class="separate">If a function is created in the global scope, what does <code>this</code> refer to?</h3>
+        <p id="j3" class="separate">The <code>window</code> object.</p>
 
-        <h3 class="separate">If a function is created within an object, the function becomes a method of that object. In that case, what does this refer to?</h3>
-        <p id="4"></p>
+        <h3 class="separate">If a function is created within an object, the function becomes a method of that object. In that case, what does <code>this</code> refer to?</h3>
+        <p id="j4" class="separate">The object it is a method of.</p>
       </section>
 
-      <section>
-        <h1></h1>
+      <section class="separate">
+        <h1 class="headingText headingDivider">Built-in Objects</h1>
         <table>
     			<tbody>
             <tr>
@@ -289,28 +291,28 @@
       			</tr>
       			<tr>
       				<td>Example of a common method for that object</td>
-      				<td></td>
-      				<td></td>
-      				<td></td>
-      				<td></td>
-      				<td></td>
-      				<td></td>
+      				<td><code>window.print()</code></td>
+      				<td><code>document.getElementById()</code></td>
+      				<td><code>toUppercase()</code></td>
+      				<td><code>toPrecision()</code></td>
+      				<td><code>Math.floor()</code></td>
+      				<td><code>getMinutes()</code></td>
       			</tr>
       			<tr>
       				<td>Explanation of example</td>
-      				<td></td>
-      				<td></td>
-      				<td></td>
-      				<td></td>
-      				<td></td>
-      				<td></td>
+      				<td>Prints the current page.</td>
+      				<td>Searches the document for an element with the given ID and returns its instance if found.</td>
+      				<td>Converts all the characters in the given string to uppercase.</td>
+      				<td>Rounds the number to a total number of spaces and returns a copy but as a string.</td>
+      				<td>Rounds the number down to the nearest whole number.</td>
+      				<td>Gets the number of minutes off the hour the current time is.</td>
       			</tr>
       		</tbody>
         </table>
       </section>
 
-      <section>
-        <h1></h1>
+      <section class="separate">
+        <h1 class="separate headingText headingDivider">Data Types</h1>
         <table>
     			<tbody>
             <tr>
@@ -324,15 +326,22 @@
       			<tr>
       				<td>Provide an example of how to declare a variable with each of these data types.</td>
       				<td><code>let sentence = "I am a string";</code></td>
-      				<td><code>let age = 18</code></td>
-      				<td><code>let ticked = false</code></td>
-      				<td><code>let </code></td>
-      				<td><code>let num1 = null</code></td>
+      				<td><code>let age = 18;</code></td>
+      				<td><code>let ticked = false;</code></td>
+      				<td><code>let x;</code></td>
+      				<td><code>let lowestScore = null;</code></td>
       			</tr>
       		</tbody>
         </table>
       </section>
-
     </main>
+
+    <section id="container">
+      <button type="button" name="closeCellContainer" id="closeCellContainer">&times;</button>
+      <div id="cellContainer"></div>
+    </section>
+
+    <script src="../scripts/enlargeCell.js"></script>
+    <script src="./project3.js"></script>
   </body>
 </html>

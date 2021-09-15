@@ -3,3 +3,13 @@
 .separate {
   margin-bottom: 1rem;
 }
+
+code {
+  word-break: break-word;
+}
+
+@media only screen and (max-width: 768px) {
+  th {
+    padding: 0.25rem;
+  }
+}

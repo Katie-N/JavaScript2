@@ -7,7 +7,7 @@ let fullName = "Katie Nordberg";
 let desiredSalary = 1000000;
 let veteranStatus = false;
 let friends = ["Luke", "Gennee", "Bethany"];
-let friendsDesiredSalaries = [1000000000, 100000 67000]
+let friendsDesiredSalaries = [1000000000, 100000, 67000]
 let friendObject = {
   firstName: "Katrina",
   lastName: "Grasinger",
