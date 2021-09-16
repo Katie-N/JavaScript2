@@ -1,3 +1,4 @@
+/* Katie Nordberg 9/13/2021 */
 * {
   margin: 0;
   padding: 0;
@@ -18,16 +19,22 @@ footer {
   width: 100vw;
   min-height: 5vh;
   background-color: var(--dark-accent-color);
+  display: flex;
+  flex-direction: column;
 }
 
 .credits {
   margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
   text-align: center;
   color: white;
+  font-family: monospace;
+}
+
+input, label {
+  font-family: monospace;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }

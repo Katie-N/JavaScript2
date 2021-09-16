@@ -14,17 +14,23 @@
       <!-- Since there is only one of each of these I changed them from classes to ids.  -->
       <!-- I turned off autocomplete so it is easier to see the results -->
       <form id="search-form" autocomplete="off">
-        <input type="text" id="search" placeholder="State or Animal">
+        <input type="text" id="search" placeholder="State">
         <ul id="suggestions">
           <li>Filter for a state</li>
-          <li>or a pet</li>
+          <li>Or an animal</li>
         </ul>
+        <!-- I added the options to search for  -->
+        <label for="dog"><input type="radio" name="pet" value="dog" id="dog">Dog Owners</label>
+        <label for="cat"><input type="radio" name="pet" value="cat" id="cat">Cat Owners</label>
+        <label for="overall"><input type="radio" name="pet" value="overall" checked id="overall">Pet Owners Overall</label>
       </form>
     </main>
 
+    <!-- I added a footer to give credit for sources. -->
     <footer>
+      <a href="https://www.javascript30.com" class="credits">JavaScript30 AJAX Type Ahead</a>
       <a href="https://www.pawlicy.com/blog/us-pet-ownership-statistics/" class="credits">Statistics collected from Pawlicy.</a>
-      <a href="https://www.codegrepper.com/code-examples/javascript/remove+special+characters+from+string+javascript">Function to Clean a String</a>
+      <a href="https://www.codegrepper.com/code-examples/javascript/remove+special+characters+from+string+javascript" class="credits">Function to Clean a String</a>
     </footer>
 
     <script src="./script.js"></script>

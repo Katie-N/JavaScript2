@@ -18,24 +18,52 @@ function findMatches(wordToMatch, states) {
 
   return states.filter(state => {
     const regex = new RegExp(cleanString, "gi");
-    return state.state.match(regex) || state.petsPercentage.match(state.petsPercentage > regex);
+    return state.state.match(regex);
   })
 }
 
-// ADDME Format number to be percentage
-function displayMatches() {
+// Format number to be a percentage
+function addAPercentage(x) {
+  // If x is not null
+  if(x) {
+    return x.toString() + "%";
+  }
+  return x;
+}
+
+// Added ability to search by dog, cat, or overall pet owners.
+function petToDisplay (section) {
+  const radioButtons = document.getElementsByName("pet");
+  let typeOfPet;
+
+  for (var i = 0; i < radioButtons.length; i++) {
+    if (radioButtons[i].checked) {
+      typeOfPet = radioButtons[i].value;
+    }
+  }
+
+  if (typeOfPet == "dog") {
+    return section.dogPercentage;
+  } else if (typeOfPet == "cat") {
+    return section.catPercentage;
+  } else {
+    return section.petsPercentage;
+  }
+}
+
+function displayMatches(input) {
   // I changed the code to only display the top 10 results instead of all of them. But if I would later need to have all of the matches I still have access to the original array.
-  const matchArray = findMatches(this.value, states);
+  const matchArray = findMatches(input.value, states);
   const shortenedMatchList = matchArray.slice(0, 10);
 
   const html = shortenedMatchList.map(state => {
-    const cleanString = cleanAString(this.value);
+    const cleanString = cleanAString(input.value);
     const regex = new RegExp(cleanString, "gi");
     const search = state.state.replace(regex, `<span class="highlight">${cleanString}</span>`);
     return `
       <li>
         <span class="name">${search}</span>
-        <span class="petPopulation">${state.petsPercentage}</span>
+        <span class="petPopulation">${addAPercentage(petToDisplay(state))}</span>
       </li>
     `
   }).join("");
@@ -44,6 +72,11 @@ function displayMatches() {
 }
 
 const searchInput = document.getElementById("search");
+const petOptionInputs = document.getElementsByName("pet");
 const suggestions = document.getElementById("suggestions");
 
-searchInput.addEventListener("keyup", displayMatches);
+// Added the ability to compare each percentage of pet owners per state.
+searchInput.addEventListener("keyup", () => {displayMatches(searchInput);});
+for (let i = 0; i < petOptionInputs.length; i++) {
+  petOptionInputs[i].addEventListener("change", () => {displayMatches(searchInput);});
+}
