@@ -1,0 +1,60 @@
+/* Katie Nordberg 9/20/2021 */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+
+:root {
+  --main-bg-color: #f3f3f3;
+  --accent-color: #f9ddd2;
+  --dark-accent-color: #525252;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  transition-duration: 1s;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+p {
+  font-family: 'Courier New', Courier;
+}
+
+.headingText {
+  font-family: "Playfair Display";
+}
+
+.headingDivider {
+  background-color: var(--accent-color);
+  text-align: center;
+  margin: auto;
+  margin-bottom: 2rem;
+  padding: 0.75rem 0;
+}
+
+main {
+  width: 75vw;
+  margin: auto;
+}
+
+main > * {
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    width: 85vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    width: 90vw;
+  }
+
+  .headingText {
+    font-size: 1.25rem;
+  }
+}
