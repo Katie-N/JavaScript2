@@ -7,11 +7,3 @@ ol {
 li > ul, li > ol {
   margin-left: 1rem;
 }
-
-a, a:visited, a:active {
-  color: inherit;
-}
-
-a:hover {
-  font-size: 125%;
-}

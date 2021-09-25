@@ -49,6 +49,15 @@ code {
   border-radius: 10%;
 }
 
+a, a:visited, a:active {
+  color: inherit;
+}
+
+a:hover {
+  font-size: 125%;
+}
+
+
 @media only screen and (max-width: 768px) {
   main {
     width: 85vw;

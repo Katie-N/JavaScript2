@@ -1,0 +1,113 @@
+/* Katie Nordberg 9/22/2021 */
+
+/* Improved by separating CSS from HTML */
+/* Removed unnecessary styling and added my own */
+
+main {
+  overflow-x: hidden;
+}
+
+.align-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.align-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.slide-in {
+  opacity: 0;
+  transition: all .5s;
+}
+
+.align-left.slide-in {
+  transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide-in {
+  transform: translateX(30%) scale(0.95);
+}
+
+/* Added options for sliding in from the top and bottom too. */
+.align-top.slide-in {
+  transform: translateY(-30%) scale(0.95)
+}
+
+.align-bottom.slide-in {
+  transform: translateY(30%) scale(0.95)
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translate(0%) scale(1);
+}
+
+.navigationLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+li {
+  list-style: none;
+}
+
+.subscribeButton {
+  background-color: var(--dark-accent-color);
+  color: white;
+  border: none;
+  padding: 5px;
+}
+
+.blogPost {
+  height: 30rem;
+  width: 30rem;
+  background-color: white;
+  margin: 2rem auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.blogPostBlurb {
+  padding: 2rem;
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+}
+
+.blogPostPicture {
+  width: 100%;
+}
+
+a:hover {
+  font-size: 100%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  min-height: 5vh;
+  background-color: var(--dark-accent-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.credits, .credits:visited, .credits:active {
+  margin: auto;
+  text-align: center;
+  color: white;
+  font-family: monospace;
+  padding: 0.2rem;
+}
+
+#lastParagraph {
+  padding-bottom: 4rem;
+}
+
+#titleText {
+  margin-top: 1rem;
+}
