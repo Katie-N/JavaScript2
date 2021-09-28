@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Katie Nordberg">
+    <meta name="date" content="9/24/2021">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/tableStyles.css">
+    <title>Project 4</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1 class="headingText headingDivider">Questions</h1>
+        <p id="q1"></p>
+        <p id="q2"></p>
+        <p id="q3"></p>
+      </section>
+
+      <section>
+        <table>
+    			<tbody>
+            <tr>
+      				<th>Operators</th>
+      				<th>Meaning</th>
+      				<th>Example and Return Value</th>
+      				<th>Explanation of Example</th>
+      			</tr>
+      			<tr>
+      				<th><code>==</code></th>
+      				<td>Is equal to. Checks if the two expressions are the same. Unstrict so they will be converted to the same type before comparing.</td>
+      				<td><code>"13" == 13</code><br>returns true.</td>
+      				<td>Because they both contain the same information even though they are different types.</td>
+      			</tr>
+      			<tr>
+      				<th><code>===</code></th>
+      				<td>Expressions are strictly equal. So if the expressions are different types then it will always return false.</td>
+      				<td><code>"13" === 13</code><br>returns false.</td>
+      				<td>Because one is a string and the other is a number even though they both contain the same information.</td>
+      			</tr>
+      			<tr>
+      				<th><code>!=</code></th>
+      				<td>Expressions are not equal.</td>
+      				<td><code>status != "married"</code><br>returns boolean true or false</td>
+      				<td>The ! reverses the check. Hence "not equal." If <code>status</code> is anything other than "married" then it will return true. Otherwise, false.</td>
+      			</tr>
+      			<tr>
+      				<th><code>!==</code></th>
+      				<td>Expressions are not strictly equal.</td>
+      				<td><code></code></td>
+      				<td>Anything that is not strictly equal will return true. Whether they are the same value with different types or completely different values.</td>
+      			</tr>
+      			<tr>
+      				<th><code>&gt;</code></th>
+      				<td>First expression is greater than second expression.</td>
+      				<td><code></code></td>
+      				<td></td>
+      			</tr>
+      			<tr>
+      				<th><code>&gt;=</code></th>
+      				<td>First expresion is greater than <i>or equal to</i> the second expression.</td>
+      				<td></td>
+      				<td></td>
+      			</tr>
+      			<tr>
+      				<th><code>&lt;</code></th>
+      				<td>First expressiom is less than the second expression.</td>
+      				<td></td>
+      				<td></td>
+      			</tr>
+      			<tr>
+      				<th><code>&lt;=</code></th>
+      				<td>First expression is less than <i>or equal to</i> the second expression.</td>
+      				<td></td>
+      				<td></td>
+      			</tr>
+      			<tr>
+      				<th><code>&amp;&amp;</code></th>
+      				<td>Checks if both expressions are true.</td>
+      				<td><code>ownsBoat &amp;&amp; ownsCar</code><br>returns true if <b>both</b> variables are true. But if one is false then it will return false.</td>
+      				<td></td>
+      			</tr>
+      			<tr>
+      				<th><code>||</code></th>
+      				<td>Checks if one or the other expression is true.</td>
+      				<td><code>age &lt; 18 || age &gt; 65</code><br>Will return true is the variable <code>age</code> is less than 18 or greater than 65. Might be used to check if a discount should be applied.</td>
+      				<td></td>
+      			</tr>
+      			<tr>
+      				<th><code>!</code></th>
+      				<td>Changes a boolean expression to the opposite value.</td>
+      				<td>!(2 + 2 == 4) returns false</td>
+      				<td>2 + 2 == 4 is true. Adding the logical not (!) operator. switches true to false.</td>
+      			</tr>
+      		</tbody>
+        </table>
+      </section>
+
+      <section>
+        <table>
+    			<tbody>
+            <tr>
+      				<th>Characters »»</th>
+      				<th>(parentheses)</th>
+      				<th>{curly braces}</th>
+      				<th>[square brackets]</th>
+      				<th>+ symbol</th>
+      			</tr>
+      			<tr>
+      				<td>usage 1</td>
+      				<td>(parentheses are used to contain expressions to be evaluated before the regular order of operations or to make the order of evaluation more clear)</td>
+      				<td>{curly braces are used to define objects.}</td>
+      				<td>[square brackets have only one usage, to identify an array index]</td>
+      				<td>The + symbol is used for adding terms.</td>
+      			</tr>
+      			<tr>
+      				<td>usage 1 example</td>
+      				<td><code>batteries = (remotes + keyboards + mice) * 2</code></td>
+      				<td><code>user = {<br>name: "Katie",<br>lastName: "Nordberg", age: 18}</code></td>
+      				<td><code>someArrayName[0]</code></td>
+      				<td><code>blankets + pillows</code></td>
+      			</tr>
+      			<tr>
+      				<td>usage 2</td>
+      				<td>(Holds parameters/arguments for a function.)</td>
+      				<td></td>
+      				<td>[square brackets have only one usage, to identify an array index]</td>
+      				<td>The + symbol can also be used to concatenate strings.</td>
+      			</tr>
+      			<tr>
+      				<td>usage 2 example</td>
+      				<td><code>displayName(firstName, lastName)</code></td>
+      				<td></td>
+      				<td><code>someArrayName[0]</code></td>
+      				<td><code>"Katie " + "Nordberg"</code></td>
+      			</tr>
+      		</tbody>
+        </table>
+      </section>
+      <section>
+        <h1 class="headingText headingDivider">Write Some JavaScript</h1>
+        <p>Testing truthy and falsy</p>
+        <label for="value1">Number Value 1</label>
+        <input type="number" name="" value="" id="value1">
+        <label for="value2">String Value 2</label>
+        <input type="number" name="" value="" id="value2">
+        <button type="button" name="button" id="testNotStrictButton">Not Strict</button>
+        <button type="button" name="button" id="testStrictButton">Strict</button>
+        <p id="result"></p>
+      </section>
+    </main>
+    <script>
+      function testNotStrict() {
+        const input1 = parseInt(document.getElementById("value1").value);
+        const input2 = document.getElementById("value2").value;
+
+        console.log("Input 1: " + input1);
+        console.log("Input 2: " + input2);
+      }
+    </script>
+  </body>
+</html>
