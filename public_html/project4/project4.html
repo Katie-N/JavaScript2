@@ -4,17 +4,58 @@
     <meta charset="utf-8">
     <meta name="author" content="Katie Nordberg">
     <meta name="date" content="9/24/2021">
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/tableStyles.css">
+    <link rel="stylesheet" type="text/css" href="../styles/main.css">
+    <link rel="stylesheet" type="text/css" href="../styles/tableStyles.css">
     <title>Project 4</title>
+    <style>
+      /* Embedded stylesheet */
+      #JavaScript {
+        margin-bottom: 3rem;
+      }
+
+      .question {
+        margin-top: 2rem;
+      }
+
+      label {
+        font-family: "Courier New";
+        text-align: center;
+      }
+
+      #options {
+        display: flex;
+        flex-direction: column;
+      }
+
+      input {
+        width: 4rem;
+        height: 2.5rem;
+        margin: 0.5rem auto;
+      }
+
+      button {
+        min-width: 4rem;
+        min-height: 2.5rem;
+        font-family: "Playfair Display";
+        padding: 0.2rem;
+        margin: 0.5rem auto;
+      }
+
+      #result {
+        width: 100%;
+        padding: 3rem;
+        margin-top: 2rem;
+        background-color: var(--accent-color)
+      }
+    </style>
   </head>
   <body>
     <main>
       <section>
         <h1 class="headingText headingDivider">Questions</h1>
-        <p id="q1"></p>
-        <p id="q2"></p>
-        <p id="q3"></p>
+        <p id="q1" class="question">Here's one of those "stupid" questions you like us to ask: what is "spaghetti code"? I've heard it referenced semi-frequently through my web development experience and I've never truly understood what it meant other than that it was not a good thing.</p>
+        <p id="q2" class="question">Hopefully I'm allowed to ask this question since it pertains to the homework... Is there a second use for curly braces? The obvious one is to denote objects. I can't think of any other time they are used in JS but I don't want to miss a point haha.</p>
+        <p id="q3" class="question">I know that <code>forEach</code> loops through the properties of an object and doesn't necessarily return/iterate in the order that the properties are written. But why is that? How is it sorting the properties - that is if it sorting them at all?</p>
       </section>
 
       <section>
@@ -47,44 +88,44 @@
       			<tr>
       				<th><code>!==</code></th>
       				<td>Expressions are not strictly equal.</td>
-      				<td><code></code></td>
+      				<td><code>num !== 5</code><br>returns true if num is anything other than the integer 5. This includes the string "5"</td>
       				<td>Anything that is not strictly equal will return true. Whether they are the same value with different types or completely different values.</td>
       			</tr>
       			<tr>
       				<th><code>&gt;</code></th>
-      				<td>First expression is greater than second expression.</td>
-      				<td><code></code></td>
-      				<td></td>
+      				<td>The first expression is greater than the second expression.</td>
+      				<td><code>successfulIdeas > failedIdeas</code><br>returns true if there are more successful ideas.</td>
+      				<td>If successfulIdeas is less than <b>or equal to</b> failedIdeas then it returns false.</td>
       			</tr>
       			<tr>
       				<th><code>&gt;=</code></th>
-      				<td>First expresion is greater than <i>or equal to</i> the second expression.</td>
-      				<td></td>
-      				<td></td>
+      				<td>The first expression is greater than <i>or equal to</i> the second expression.</td>
+      				<td><code>pillows &gt;= 3</code><br>returns true is there are 3 or more pillows</td>
+      				<td>&gt;= compares the value on the left with the one on the right. If pillow has 3 or more pillows (including 3 because of the =) then the comparison evaluates to true.</td>
       			</tr>
       			<tr>
       				<th><code>&lt;</code></th>
-      				<td>First expressiom is less than the second expression.</td>
-      				<td></td>
-      				<td></td>
+      				<td>First expression is less than the second expression.</td>
+      				<td><code>waterTemperature &lt; 212</code>returns true if the water is not at boiling temperature.</td>
+      				<td>The comparison will be true once the water starts boiling.</td>
       			</tr>
       			<tr>
       				<th><code>&lt;=</code></th>
       				<td>First expression is less than <i>or equal to</i> the second expression.</td>
-      				<td></td>
-      				<td></td>
+      				<td><code>13 &lt;= 13</code><br>returns true</td>
+      				<td>Returns true because the check is for less than <b>or equal to</b></td>
       			</tr>
       			<tr>
       				<th><code>&amp;&amp;</code></th>
       				<td>Checks if both expressions are true.</td>
       				<td><code>ownsBoat &amp;&amp; ownsCar</code><br>returns true if <b>both</b> variables are true. But if one is false then it will return false.</td>
-      				<td></td>
+      				<td>If ownsBoat is true <b>AND</b> ownsCar is true then the check will return true.</td>
       			</tr>
       			<tr>
       				<th><code>||</code></th>
       				<td>Checks if one or the other expression is true.</td>
-      				<td><code>age &lt; 18 || age &gt; 65</code><br>Will return true is the variable <code>age</code> is less than 18 or greater than 65. Might be used to check if a discount should be applied.</td>
-      				<td></td>
+      				<td><code>(age &lt; 18) || (age &gt; 65)</code><br>Will return true if the variable <code>age</code> is less than 18 or greater than 65.</td>
+      				<td>Might be used to check if a discount should be applied.</td>
       			</tr>
       			<tr>
       				<th><code>!</code></th>
@@ -123,40 +164,72 @@
       			<tr>
       				<td>usage 2</td>
       				<td>(Holds parameters/arguments for a function.)</td>
-      				<td></td>
+      				<td>{curly braces are also used to contain statements like in a function or conditional.}</td>
       				<td>[square brackets have only one usage, to identify an array index]</td>
       				<td>The + symbol can also be used to concatenate strings.</td>
       			</tr>
       			<tr>
       				<td>usage 2 example</td>
       				<td><code>displayName(firstName, lastName)</code></td>
-      				<td></td>
+      				<td><code>function displaySecondUseCase() {<br>console.log("This is another use for curly braces that I totally forgot about.")<br>}</code></td>
       				<td><code>someArrayName[0]</code></td>
       				<td><code>"Katie " + "Nordberg"</code></td>
       			</tr>
       		</tbody>
         </table>
       </section>
-      <section>
+      <section id="JavaScript">
         <h1 class="headingText headingDivider">Write Some JavaScript</h1>
-        <p>Testing truthy and falsy</p>
-        <label for="value1">Number Value 1</label>
-        <input type="number" name="" value="" id="value1">
-        <label for="value2">String Value 2</label>
-        <input type="number" name="" value="" id="value2">
-        <button type="button" name="button" id="testNotStrictButton">Not Strict</button>
-        <button type="button" name="button" id="testStrictButton">Strict</button>
-        <p id="result"></p>
+        <p class="headingText">Testing truthy and falsy</p>
+        <section id="options">
+          <label for="value1">Number Value 1</label>
+          <input type="number" name="value1" value="" id="value1">
+          <label for="value2">String Value 2</label>
+          <input type="number" name="value2" value="" id="value2">
+          <button type="button" name="button" id="testNotStrictButton">Not Strict</button>
+          <button type="button" name="button" id="testStrictButton">Strict</button>
+        </section>
+        <p id="result">Waiting on the result...</p>
       </section>
     </main>
     <script>
       function testNotStrict() {
         const input1 = parseInt(document.getElementById("value1").value);
         const input2 = document.getElementById("value2").value;
+        const result = document.getElementById("result");
 
-        console.log("Input 1: " + input1);
-        console.log("Input 2: " + input2);
+        console.log("Not Strict Input 1: " + input1);
+        console.log("Not Strict Input 2: " + input2);
+
+        if (input1 == input2) {
+          result.innerText = "This string and number are EQUAL";
+        } else {
+          result.innerText = "This string and number are NOT EQUAL";
+        }
       }
+
+      function testStrict() {
+        const input1 = parseInt(document.getElementById("value1").value);
+        const input2 = document.getElementById("value2").value;
+        const result = document.getElementById("result");
+
+        console.log("Strict Input 1: " + input1);
+        console.log("Strict Input 2: " + input2);
+
+        switch (input1 === input2) {
+          case true:
+            result.innerText = "This string and number are EQUAL";
+            break;
+          case false:
+            result.innerText = "This string and number are NOT EQUAL"
+            break;
+          default:
+            result.innerText = "Not sure.";
+        }
+      }
+
+      document.getElementById("testNotStrictButton").addEventListener("click", testNotStrict);
+      document.getElementById("testStrictButton").addEventListener("click", testStrict);
     </script>
   </body>
 </html>
