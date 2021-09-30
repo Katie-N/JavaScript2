@@ -1,0 +1,155 @@
+/* Katie Nordberg
+   9/29/2021 */
+
+footer {
+  bottom: 0;
+  min-height: 5vh;
+  background-color: var(--dark-accent-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.credits, .credits:visited, .credits:active {
+  margin: auto;
+  text-align: center;
+  color: white;
+  font-family: monospace;
+  padding: 0.2rem;
+}
+
+/* Separated CSS into own file */
+
+/* html {
+  font-size: 10px;
+} */
+
+/* body {
+  background: #ffc600;
+  font-family: 'helvetica neue';
+  font-weight: 200;
+  font-size: 20px;
+} */
+
+/* I really liked Wes Bos' notebook style for the words so I'm keeping that. */
+.words {
+  /* Adjusted styles to work with cover flip */
+  width: 500px;
+  min-height: 600px;
+
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+  padding: 1rem 2rem 1rem 5rem;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px;
+  background-size: 100% 3rem;
+  position: relative;
+  line-height: 3rem;
+
+  /* Added book flip transition */
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  transition: transform .5s ease-in-out, box-shadow .35s ease-in-out;
+}
+
+#notebookContainer {
+  perspective: 1200px;
+  width: max-content;
+  margin: auto;
+  backface-visibility: visible;
+  margin-bottom: 10vh;
+}
+
+/* Specified that it should only be the paragraph descendents of words */
+.words p {
+  /* I don't like the whole line break between pauses so I'm removing it. */
+  /* margin: 0 0 3rem; */
+
+  /* I thought it would be cool to make the font look as close to handwriting as possible. I think it pairs really well with the notebook background. */
+  font-family: "Gloria Hallelujah";
+
+  transform-style: preserve-3d;
+}
+
+/* Added cover flip effect */
+#front {
+  /* Made effect last longer */
+  transition: transform 1s ease-in-out, box-shadow .35s ease-in-out;
+  background: var(--accent-color);
+  border-bottom-right-radius: .5em;
+  border-top-right-radius: .5em;
+  transform-style: preserve-3d;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  transform-origin: left center;
+
+  backface-visibility: visible;
+}
+
+/* Hide cover words when flipped */
+#front h1, #front p {
+  backface-visibility: hidden;
+  width: 100%;
+  height: min-content;
+  position: absolute;
+}
+
+#front h1 {
+  color: black;
+  font-family: "Playfair Display", cursive;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 65px;
+  text-align: center;
+}
+
+#front p {
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  padding: 10px;
+}
+
+.words:before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  top: 0;
+  left: 30px;
+  bottom: 0;
+  border: 1px solid;
+  border-color: transparent #efe4e4;
+}
+
+#notebookContainer:hover #front, .open {
+  transform: rotateY(-160deg) scale(1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+#controls {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: min-content;
+  height: min-content;
+}
+
+.controlButton {
+  width: 100px;
+  height: 50px;
+  background-color: var(--accent-color);
+  border-radius: 5px;
+  color: var(--dark-accent-color);
+  font-family: "Playfair Display";
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 20px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Katie Nordberg">
+    <meta name="date" content="9/29/2021">
+    <title>Speech Detection</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <!-- Linked handwriting font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div id="notebookContainer">
+      <div class="words"></div>
+      <div id="front">
+        <h1>Diary</h1>
+        <p>*infinite edition</p>
+      </div>
+    </div>
+
+    <!-- Add buttons to stop and start speech recognition. -->
+    <section id="controls">
+      <button type="button" name="button" id="startRecognition" class="controlButton">Start</button>
+      <button type="button" name="button" id="stopRecognition" class="controlButton">Stop</button>
+    </section>
+
+    <!-- Added footer to give credits -->
+    <footer>
+      <a href="https://www.javascript30.com" target="_blank" class="credits">Native Speech Detection</a>
+      <a href="https://fonts.google.com/specimen/Gloria+Hallelujah#standard-styles" target="_blank" class="credits">Gloria Hallelujah Handwriting Font</a>
+      <a href="https://codepen.io/dhanishgajjar/pen/bjaYYo" target="_blank" class="credits">Book Cover Effect</a>
+    </footer>
+    <script src="./speechRecognition.js"></script>
+  </body>
+</html>
