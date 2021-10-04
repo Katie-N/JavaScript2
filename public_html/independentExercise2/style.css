@@ -1,0 +1,28 @@
+/* Katie Nordberg
+   10/4/2021 */
+
+#results {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+#numLabel {
+  font-family: "Courier New", monospace;
+}
+
+#calculate {
+  width: min-content;
+  padding: 0.5rem;
+}
+
+#num {
+  width: 10rem;
+}
