@@ -10,8 +10,7 @@
 #options {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
 #numLabel {
@@ -21,8 +20,20 @@
 #calculate {
   width: min-content;
   padding: 0.5rem;
+  border: none;
+  background-color: var(--dark-accent-color);
+  border-radius: 5px;
+  color: white;
+  font-family: "Courier New", monospace;
 }
 
 #num {
-  width: 10rem;
+  width: 5rem;
+  height: 3rem;
+  font-size: 26px;
+  font-family: "Courier New", monospace;
+}
+
+#numLabel, #calculate, #num {
+  margin: 0.25rem;
 }

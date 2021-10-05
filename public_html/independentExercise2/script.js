@@ -50,7 +50,7 @@ function divide () {
   // initial value
   let currentEquation = "1 / " + userNumber + " = " + (1 / userNumber).toFixed(2) + "<br>";
   for (let i = 2; i < 10; i++) {
-    currentEquation += i + " / " + userNumber + " = " + (i / userNumber) + "<br>";
+    currentEquation += i + " / " + userNumber + " = " + (i / userNumber).toFixed(2) + "<br>";
   }
   document.getElementById("division").innerHTML = currentEquation;
 }
