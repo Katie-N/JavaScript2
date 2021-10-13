@@ -1,0 +1,86 @@
+/* Katie Nordberg 10/13/2021 */
+
+/* All unique styling not taken from project */
+
+.tasks {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px var(--dark-accent-color) solid;
+}
+
+.tasks label {
+  font-size: 1.75rem;
+}
+
+.deleteTask {
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.addItems {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  margin: auto;
+  padding: 1rem;
+}
+
+.addItems input {
+  padding: 0.25rem;
+  margin: 0.25rem;
+  text-align: center;
+}
+
+#addTaskButton {
+  background-color: var(--accent-color);
+  border: 3px var(--dark-accent-color) solid;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Playfair Display", serif;
+}
+
+#addTaskText {
+  font-family: "Courier New", monospace;
+  border: none;
+  font-size: 1.5rem;
+}
+
+/* Modified from HTML5 Canvas Tutorials blog - see credits */
+[type=checkbox] {
+    -webkit-appearance: none;
+    border: 1px solid #cacece;
+    padding: 0.5rem;
+    display: inline-block;
+    position: relative;
+}
+
+[type=checkbox]:checked {
+	background-color: var(--dark-accent-color);
+}
+
+/* Modified from Andrew's answer on StackOverflow - see credits */
+input[type=checkbox]:checked + label{
+  text-decoration: line-through;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  min-height: 5vh;
+  background-color: var(--dark-accent-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.credits {
+  margin: auto;
+  text-align: center;
+  color: white;
+  font-family: monospace;
+}

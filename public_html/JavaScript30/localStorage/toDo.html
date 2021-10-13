@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Katie Nordberg">
+    <meta name="date" content="10/13/2021">
+    <title>Persistent To Do List</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main>
+      <!-- Replaced fish svg with appropriate background and styling. -->
+      <div class="wrapper">
+        <!-- Changed from list of tacos to list of to dos -->
+        <h2 class="headingText headingDivider">To Do</h2>
+        <p></p>
+        <ul class="tasks">
+          <li>Loading tasks...</li>
+        </ul>
+        <!-- Changed class name to camel casing to be consistant with my style -->
+        <form class="addItems">
+          <input id="addTaskText" type="text" name="item" placeholder="Task Name" required>
+          <input id="addTaskButton" type="submit" value="Add Task">
+        </form>
+      </div>
+    </main>
+
+    <!-- I added a footer to give credit for sources. -->
+    <footer>
+      <a href="https://www.javascript30.com" class="credits">JavaScript30 Local Storage</a>
+      <a href="https://stackoverflow.com/questions/2794137/sanitizing-user-input-before-adding-it-to-the-dom-in-javascript" class="credits">Scrub User Input</a>
+      <a href="https://www.html5canvastutorials.com/blog/2012/06/custom-form-radio-checkbox/" class="credits">Styling Checkboxes</a>
+      <a href="https://stackoverflow.com/questions/30975459/add-strikethrough-to-checked-checkbox" class="credits">Strikethrough Completed Checkboxes</a>
+    </footer>
+    <!-- Moved contents to separate file -->
+    <script src="./script.js"></script>
+  </body>
+</html>
