@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Katie Nordberg">
+    <meta name="date" content="10/7/2021">
+    <title>Project 5</title>
+    <link rel="stylesheet" href="../styles/main.css">
+  </head>
+  <body>
+    <main>
+      <section>
+        <p id="q1">Node vs. element question</p>
+        <p id="q2">Nodelist vs. array question</p>
+        <p id="q3">Defense against XSS attacks</p>
+      </section>
+      <section>
+        <ul>
+          <li id="computers">
+            Computers
+            <ul>
+              <li id="networking" class="favorite">Networking</li>
+              <li id="web">Web Development</li>
+              <li id="data">Data Analytics</li>
+            </ul>
+          </li>
+          <li>
+            Business
+            <ul>
+              <li id="manage" class="favorite">Management</li>
+              <li id="accounting">Accounting</li>
+              <li id="entrepreneur">Entrepreneur</li>
+            </ul>
+          </li>
+          <li>
+            Auto Technology
+            <ul>
+              <li id="commercial" class="favorite">Commercial Vehicles</li>
+              <li id="clean">Clean Energy</li>
+              <li id="design">Vehicle Design</li>
+            </ul>
+          </li>
+          <li>
+            Healthcare
+            <ul>
+              <li id="doctor" class="favorite">Doctor</li>
+              <li id="insurance">Insurance</li>
+              <li id="pharmacy">Pharmaceuticals</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Methods to Traverse the DOM Tree</h2>
+        <button type="button" name="button" id="byIdButton">getElementById()</button>
+        <button type="button" name="button" id="byQueryButton">querySelector()</button>
+        <button type="button" name="button" id="byClassButton">getElementsByClassName()</button>
+        <button type="button" name="button" id="byTagButton">getElementsByTagName()</button>
+        <button type="button" name="button" id="byQueryAllButton">querySelectorAll()</button>
+
+        <h2>Properties to Modify DOM Tree</h2>
+        <button type="button" name="button" id="byParentButton">parentNode</button>
+        <button type="button" name="button" id="byPreviousSiblingButton">previousSibling</button>
+        <button type="button" name="button" id="byNextSiblingButton">nextSibling</button>
+        <button type="button" name="button" id="byClassNameButton">className</button>
+
+        <h2>Methods to modify the DOM tree</h2>
+        <button type="button" name="button">createElement() createTextNode() appendChild()</button>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
