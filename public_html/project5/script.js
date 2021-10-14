@@ -1,3 +1,5 @@
+// Katie Nordberg 10/7/2021
+
 function byId() {
   document.getElementById("computers").style.color = "#00f";
 }
@@ -42,7 +44,8 @@ function byClassName() {
 
 function createListElement() {
   const listEl = document.createElement("li");
-  listEl.textContent = "Science";
+  const elText = document.createTextNode("Science");
+  listEl.appendChild(elText);
   document.getElementById("masterList").insertBefore(listEl, masterList.children[1]);
 }
 
