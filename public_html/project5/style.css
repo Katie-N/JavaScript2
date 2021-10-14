@@ -1,0 +1,13 @@
+button {
+  border: none;
+  padding: 1.25rem;
+  cursor: pointer;
+}
+
+.optionSection {
+  margin-bottom: 1rem;
+}
+
+#questions p {
+  margin-bottom: 1rem;
+}

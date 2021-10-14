@@ -40,6 +40,23 @@ function byClassName() {
   document.getElementById("data").classList.add("favorite");
 }
 
+function createListElement() {
+  const listEl = document.createElement("li");
+  listEl.textContent = "Science";
+  document.getElementById("masterList").insertBefore(listEl, masterList.children[1]);
+}
+
+function removeChild() {
+  document.getElementById("engines").remove();
+}
+
+function hasAndRemoveAttribute() {
+  const secondListItem = document.getElementsByTagName("li")[1];
+  if (secondListItem.classList.contains("favorite")) {
+    secondListItem.classList.remove("favorite");
+  }
+}
+
 document.getElementById("byIdButton").addEventListener("click", byId);
 document.getElementById("byQueryButton").addEventListener("click", byQuery);
 document.getElementById("byClassButton").addEventListener("click", byClass);
@@ -49,3 +66,6 @@ document.getElementById("byParentButton").addEventListener("click", byParent);
 document.getElementById("byPreviousSiblingButton").addEventListener("click", byPreviousSibling);
 document.getElementById("byNextSiblingButton").addEventListener("click", byNextSibling);
 document.getElementById("byClassNameButton").addEventListener("click", byClassName);
+document.getElementById("createListElement").addEventListener("click", createListElement);
+document.getElementById("removeChild").addEventListener("click", removeChild);
+document.getElementById("hasAndRemoveAttribute").addEventListener("click", hasAndRemoveAttribute);
