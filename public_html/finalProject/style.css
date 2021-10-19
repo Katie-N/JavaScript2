@@ -1,0 +1,87 @@
+/* Katie Nordberg 10/16/2021 */
+
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+nav {
+  width: 100%;
+  padding: 1rem;
+}
+
+#navigationList {
+  list-style: none;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.categories {
+  font-family: serif;
+  font-size: 2rem;
+  padding: 0 2rem;
+}
+
+#displayedProducts {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  width: 35%;
+  max-width: 300px;
+  height: min-content;
+  margin: 1rem;
+}
+
+.productImages {
+  width: 100%;
+}
+
+#shoppingCartIcon {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#shoppingCart {
+  position: fixed;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+  transition-duration: 1s;
+  overflow-y: scroll;
+}
+
+.shoppingAreaInactive {
+  width: 0%;
+}
+
+.shoppingAreaActive {
+  width: 50%;
+}
+
+#closeCart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  z-index: 15;
+}
+
+footer {
+  background-image: url("./assets/footerBackgroundLeaves.jpg");
+  background-size: cover;
+  width: 100%;
+  min-height: 20rem;
+}
