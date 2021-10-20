@@ -1,0 +1,18 @@
+/* Katie Nordberg 10/19/2021 */
+img {
+  width: 25%;
+}
+
+#pictures {
+  text-align: center;
+}
+
+#imageDescription {
+  margin: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  img {
+    width: 100%;
+  }
+}
