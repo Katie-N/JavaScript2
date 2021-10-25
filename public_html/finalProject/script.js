@@ -103,19 +103,6 @@ products.forEach((product) => {
 });
 
 // Add products to page
-// function addCategories() {
-//   let allCategories = [];
-//   products.forEach((product) => {
-//     for (var i = 0; i < product.categories.length; i++) {
-//       if(!allCategories.includes(product.categories[i])) {
-//         allCategories.push(product.categories[i]);
-//       }
-//     }
-//   });
-//   console.log(allCategories);
-// }
-
-// Add products to page
 function createProduct(product) {
   const container = document.createElement("div");
   container.classList.add("product");
@@ -127,7 +114,7 @@ function createProduct(product) {
   productImage.classList.add("productImages");
 
   const productName = document.createElement("h3");
-  productName.textContent = product.name + " - $" + product.price.toFixed(2);
+  productName.textContent = `${product.name} - $${product.price.toFixed(2)}`;
   productName.classList.add("productNames");
 
   const productDescription = document.createElement("p");
@@ -143,10 +130,6 @@ function createProduct(product) {
   document.getElementById("displayedProducts").appendChild(container);
 }
 
-// function addToDOM(parent, child) {
-//   parent.appendChild(child);
-// }
-
 function viewProductsInCategory (category) {
   removeChildren(document.getElementById("displayedProducts"));
 
@@ -156,43 +139,60 @@ function viewProductsInCategory (category) {
 }
 
 function removeChildren(parent) {
-  console.log("Function is called")
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild)
-    console.log("removing the child");
   }
 }
 
 // Add product to cart when clicked
 function selectItem(e) {
-  console.log(e.currentTarget.dataset.id);
-  itemsInCart.push(products[e.currentTarget.dataset.id - 1]);
+let selection = products[e.currentTarget.dataset.id - 1];
+  // If the item is already in the cart then increment the quantity
+  if (countQuantity(selection, itemsInCart) >= 1) {
+    itemsInCart[itemsInCart.indexOf(selection)].quantity += 1;
+  } else { // Otherwise add it to the cart
+    selection.quantity = 1;
+    itemsInCart.push(selection);
+  }
+  // Refresh cart
   displayItemsInCart();
 }
 
 // Remove product from shopping cart
-function removeItem(e) {
-  itemsInCart.splice(e.currentTarget.dataset.id - 1, 1);
+function removeItemFromCart(e) {
+  itemsInCart[itemsInCart.indexOf(products[e.target.dataset.id - 1])].quantity--;
+  if (itemsInCart[itemsInCart.indexOf(products[e.target.dataset.id - 1])].quantity === 0) {
+    itemsInCart.splice(itemsInCart.indexOf(products[e.target.dataset.id - 1]), 1);
+  }
   displayItemsInCart();
 }
 
 function displayItemsInCart() {
   removeChildren(document.getElementById("cartItems"));
-  console.log(document.getElementById("cartItems"));
   itemsInCart.forEach((product) => {
     cartItem = document.createElement("li");
     cartItem.setAttribute("data-id", product.id)
+
+    cartItemQuantity = document.createElement("p");
+    cartItemQuantity.textContent = `Quantity: ${product.quantity}`;
+
+    cartItemDeleteButton = document.createElement("button");
+    cartItemDeleteButton.textContent = "🗑️";
+    cartItemDeleteButton.setAttribute("data-id", product.id)
+    cartItemDeleteButton.addEventListener("click", removeItemFromCart);
 
     cartItemText = document.createElement("h2");
     cartItemText.textContent = product.name;
 
     cartItemPrice = document.createElement("p");
-    cartItemPrice.textContent = "$" + product.price.toFixed(2);
+    cartItemPrice.textContent = `$${product.price.toFixed(2)}`;
 
     cartItem.setAttribute("data-quantity", countQuantity(product, itemsInCart));
 
+    cartItem.appendChild(cartItemDeleteButton);
     cartItem.appendChild(cartItemText);
     cartItem.appendChild(cartItemPrice);
+    cartItem.appendChild(cartItemQuantity);
     document.getElementById("cartItems").appendChild(cartItem);
   });
 }
@@ -224,5 +224,4 @@ document.getElementById("pots").addEventListener("click", () => {viewProductsInC
 
 // Create shopping cart area
 // total - loop through itemsInCart and add up prices
-// delete button - loop through items in cart and add a delete button with the data id of the item or the index item in the cart array. Then splice it to remove it. Then repopulate the shopping cart
 // Put the number of items in the cart on top of the cart. Just itemsInCart.length and update it when things are added/removed
