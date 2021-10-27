@@ -73,16 +73,7 @@ const products = [
     description: "Sturdy marble pot and a stylish rose gold stand",
     price: 15,
     categories: ["pots"],
-  },
-  // {
-  //   id: 9,
-  //   pictureSrc: "./assets/snakePlant.jpg",
-  //   pictureAlt: "",
-  //   name: "Snake Plant",
-  //   description: "",
-  //   price: ,
-  //   categories: ["plants"],
-  // },
+  }
 ]
 
 let plants = [];
@@ -160,41 +151,98 @@ let selection = products[e.currentTarget.dataset.id - 1];
 
 // Remove product from shopping cart
 function removeItemFromCart(e) {
-  itemsInCart[itemsInCart.indexOf(products[e.target.dataset.id - 1])].quantity--;
-  if (itemsInCart[itemsInCart.indexOf(products[e.target.dataset.id - 1])].quantity === 0) {
-    itemsInCart.splice(itemsInCart.indexOf(products[e.target.dataset.id - 1]), 1);
+  let indexOfProductInCart = itemsInCart.indexOf(products[e.target.dataset.id - 1]);
+
+  itemsInCart[indexOfProductInCart].quantity--;
+  if (itemsInCart[indexOfProductInCart].quantity === 0) {
+    itemsInCart.splice(indexOfProductInCart, 1);
   }
+  // Refresh cart
   displayItemsInCart();
 }
 
+// Create shopping cart area
 function displayItemsInCart() {
   removeChildren(document.getElementById("cartItems"));
   itemsInCart.forEach((product) => {
-    cartItem = document.createElement("li");
+    let cartItem = document.createElement("li");
     cartItem.setAttribute("data-id", product.id)
 
-    cartItemQuantity = document.createElement("p");
-    cartItemQuantity.textContent = `Quantity: ${product.quantity}`;
-
-    cartItemDeleteButton = document.createElement("button");
-    cartItemDeleteButton.textContent = "🗑️";
-    cartItemDeleteButton.setAttribute("data-id", product.id)
+    let cartItemDeleteButton = document.createElement("button");
+    cartItemDeleteButton.setAttribute("data-id", product.id);
+    cartItemDeleteButton.classList.add("removeFromCartButtons");
     cartItemDeleteButton.addEventListener("click", removeItemFromCart);
 
-    cartItemText = document.createElement("h2");
-    cartItemText.textContent = product.name;
+    let removeItemIcon = document.createElement("img");
+    removeItemIcon.setAttribute("src", "./assets/dustbin.png");
+    removeItemIcon.setAttribute("alt", "Remove From Cart");
+    removeItemIcon.classList.add("removeItemIcons");
 
-    cartItemPrice = document.createElement("p");
+    cartItemDeleteButton.appendChild(removeItemIcon);
+
+    let cartItemText = document.createElement("h2");
+    cartItemText.textContent = product.name;
+    cartItemText.classList.add("cartItemNames");
+
+    let cartItemDetailsDiv = document.createElement("div");
+
+    let cartItemPrice = document.createElement("p");
     cartItemPrice.textContent = `$${product.price.toFixed(2)}`;
+    cartItemPrice.classList.add("cartItemPrice");
+
+    let cartItemQuantity = document.createElement("p");
+    cartItemQuantity.textContent = `Quantity: ${product.quantity}`;
+    cartItemQuantity.classList.add("cartItemQuantity");
+
+    cartItemDetailsDiv.appendChild(cartItemPrice);
+    cartItemDetailsDiv.appendChild(cartItemQuantity);
 
     cartItem.setAttribute("data-quantity", countQuantity(product, itemsInCart));
+    cartItem.classList.add("itemsInCart");
 
     cartItem.appendChild(cartItemDeleteButton);
     cartItem.appendChild(cartItemText);
-    cartItem.appendChild(cartItemPrice);
-    cartItem.appendChild(cartItemQuantity);
+    cartItem.appendChild(cartItemDetailsDiv);
     document.getElementById("cartItems").appendChild(cartItem);
   });
+
+  displayTotals();
+}
+
+function displayTotals () {
+  let selectedState;
+  if (!document.getElementById("stateSelectionBox")) {
+    selectedState = "KS";
+  } else {
+    selectedState = document.getElementById("stateSelectionBox").value;
+  }
+  let cartTotals = calculateTotal(itemsInCart, selectedState);
+
+  document.getElementById("cartTotalCost").textContent = `Total Amount $${cartTotals.totalCost.toFixed(2)}`;
+
+  document.getElementById("cartTotalItems").textContent = `${cartTotals.totalItems} ${cartTotals.totalItems == 1 ? 'item' : 'items'}`;
+
+  document.getElementById("totalCartItemsPreview").textContent = cartTotals.totalItems;
+}
+
+// This function assumes it will be given an array of objects where each object will have a number property called price and a number property called quantity. And a string of a state's name to calculate sales tax
+function calculateTotal(itemsToTotal, state) {
+  let totals = {
+    subtotalCost: 0,
+    totalCost: 0,
+    totalItems: 0
+  }
+  itemsToTotal.forEach((productToCount) => {
+    totals.subtotalCost += productToCount.price * productToCount.quantity;
+    totals.totalItems += productToCount.quantity;
+  });
+
+  totals.totalCost = addSalesTax(totals.subtotalCost, state);
+  return totals;
+}
+
+function addTax(price, state) {
+  return price * states[states.indexOf(state)].taxRate;
 }
 
 function countQuantity(itemToCount, arrayToLookIn) {
@@ -213,7 +261,7 @@ function closeCart() {
   document.getElementById("shoppingCart").classList.remove("shoppingAreaActive");
 }
 
-document.getElementById("shoppingCartIcon").addEventListener("click", openCart);
+document.getElementById("shoppingCartPreviewButton").addEventListener("click", openCart);
 document.getElementById("closeCart").addEventListener("click", closeCart);
 
 viewProductsInCategory(products);
@@ -222,6 +270,26 @@ document.getElementById("allProducts").addEventListener("click", () => {viewProd
 document.getElementById("plants").addEventListener("click", () => {viewProductsInCategory(plants)});
 document.getElementById("pots").addEventListener("click", () => {viewProductsInCategory(pots)});
 
-// Create shopping cart area
-// total - loop through itemsInCart and add up prices
-// Put the number of items in the cart on top of the cart. Just itemsInCart.length and update it when things are added/removed
+function displaySalesTaxOptions() {
+  let selectionBox = document.createElement("select");
+  selectionBox.setAttribute("id", "stateSelectionBox");
+  for (state in states) {
+    let currentOption = document.createElement("option");
+    currentOption.setAttribute("value", state);
+    currentOption.textContent = state;
+    selectionBox.appendChild(currentOption);
+  };
+  document.getElementById("totals").appendChild(selectionBox);
+}
+
+displayTotals();
+displaySalesTaxOptions();
+
+function addSalesTax (subtotal, state) {
+  return (subtotal * states[state].rate) + subtotal;
+}
+
+document.getElementById("stateSelectionBox").addEventListener("change", () => {
+  calculateTotal(itemsInCart, document.getElementById("stateSelectionBox").value);
+  displayTotals();
+})

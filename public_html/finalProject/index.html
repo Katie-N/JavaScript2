@@ -2,7 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="name" content="Katie Nordberg">
+    <meta name="date" content="10/16/2021">
     <title>Plant Friends</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Raleway:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
@@ -12,8 +17,12 @@
         <li id="plants" class="categories">Plants</li>
         <li id="pots" class="categories">Pots</li>
       </ul>
-      <img id="shoppingCartIcon" src="./assets/shoppingCart.png" alt="">
     </nav>
+
+    <div id="shoppingCartPreviewButton">
+      <p id="totalCartItemsPreview">0</p>
+      <img id="shoppingCartIcon" src="./assets/shoppingCart.png" alt="">
+    </div>
 
     <div id="displayedProducts">
     </div>
@@ -22,9 +31,25 @@
       <button id="closeCart">&#10005;</button>
       <ul id="cartItems">
       </ul>
+      <div id="totals">
+        <h2 id="cartTotalItems"></h2>
+        <h1 id="cartTotalCost"></h1>
+      </div>
+      <button id="checkoutButton">Checkout</button>
     </div>
 
-    <footer id="footer"></footer>
+    <footer id="footer">
+      <section>
+        <ul id="credits">
+          <li><a href="https://www.unsplash.com">Unsplash for product images</a></li>
+          <li><a href="https://www.pexels.com">Pexels for product images</a></li>
+          <li><a href="https://www.flaticon.com">Flaticon for shopping cart icon</a></li>
+          <li><a href="https://fonts.google.com">Google Font for fonts</a></li>
+          <li><a href="https://github.com/valeriansaliou/node-sales-tax/blob/master/res/sales_tax_rates.json">valeriansaliou for sales tax object</a></li>
+        </ul>
+      </section>
+    </footer>
+    <script src="./stateSalesTax.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

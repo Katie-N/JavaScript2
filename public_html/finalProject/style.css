@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --checkoutButtonHeight: 4rem;
+}
+
 nav {
   width: 100%;
   padding: 1rem;
@@ -21,9 +25,11 @@ nav {
 }
 
 .categories {
-  font-family: serif;
+  font-family: "Raleway";
   font-size: 2rem;
   padding: 0 2rem;
+  cursor: pointer;
+  text-align: center;
 }
 
 #displayedProducts {
@@ -42,13 +48,42 @@ nav {
 
 .productImages {
   width: 100%;
+  cursor: pointer;
+}
+
+.productNames {
+  font-family: "Abril Fatface", serif;
+}
+
+.productDescriptions {
+  font-family: "Raleway", sans-serif;
+}
+
+#shoppingCartPreviewButton {
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 1.5rem;
+  margin-right: 1.5rem;
+  z-index: 5;
+  cursor: pointer;
 }
 
 #shoppingCartIcon {
   height: 100%;
+  cursor: pointer;
+}
+
+#totalCartItemsPreview {
   position: absolute;
-  top: 0;
-  right: 0;
+  text-align: center;
+  z-index: 1;
+  top: 8%;
+  left: 59%;
+  transform: translateX(-50%);
+  font-family: "Abril Fatface";
+  font-size: 30px;
 }
 
 #shoppingCart {
@@ -70,13 +105,79 @@ nav {
   width: 50%;
 }
 
+#cartItems {
+  padding: 4rem 2rem 0 2rem;
+  min-height: calc(100% - var(--checkoutButtonHeight) - 4rem);
+  list-style: none;
+}
+
+.itemsInCart {
+  display: grid;
+  grid-template-columns: 15% 60% 25%;
+  align-items: center;
+  justify-items: left;
+  margin-bottom: 2rem;
+}
+
+.removeFromCartButtons {
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+  background-color: inherit;
+  border: none;
+  background-image: url("./assets/dustbin.png");
+  background-size: cover;
+}
+
+.removeItemIcons {
+  height: 0;
+}
+
+.cartItemNames {
+  font-family: "Abril Fatface", serif;
+}
+
+.cartItemPrice, .cartItemQuantity {
+  font-family: "Raleway", sans-serif;
+}
+
+#totals {
+  font-family: "Raleway", sans-serif;
+  height: 4rem;
+}
+
+#stateSelectionBox {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+#checkoutButton {
+  position: sticky;
+  color: white;
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+  bottom: 0;
+  width: 100%;
+  height: var(--checkoutButtonHeight);
+  border: none;
+  background-image: url("./assets/footerBackgroundLeaves3.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+
 #closeCart {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1rem;
-  height: 1rem;
   z-index: 15;
+  margin: 1rem;
+  font-size: 2rem;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
 }
 
 footer {
@@ -84,4 +185,62 @@ footer {
   background-size: cover;
   width: 100%;
   min-height: 20rem;
+}
+
+#credits {
+  padding: 2rem;
+  list-style: none;
+}
+
+#credits * {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .shoppingAreaActive {
+    width: 100vw;
+  }
+
+  #shoppingCart {
+    transition-duration: 0s;
+  }
+
+  #closeCart {
+    margin-left: 3rem;
+  }
+
+  .itemsInCart {
+    grid-template-columns: 20% 60% 20%;
+  }
+
+  .removeFromCartButtons {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  #cartItems {
+    /* min-height: calc(100% - var(--checkoutButtonHeight) - 6rem); */
+  }
+
+  #totals {
+    margin: 0 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .product {
+    width: 80%;
+  }
+
+  #shoppingCartPreviewButton {
+    margin: 0;
+    transform: scale(0.75);
+  }
+
+  .categories {
+    padding: 0 1rem;
+  }
 }
